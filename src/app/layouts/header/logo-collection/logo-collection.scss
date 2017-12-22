@@ -1,0 +1,41 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/tooltip';
+
+.promoWrap {
+    background: $gray-darkest;
+    box-shadow: inset 0 0 0 6px $gray-darkest, inset 0 0 0 7px $white;
+    padding: 16px 24px;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    margin-top: -16px;
+    margin-bottom: 48px;
+
+    &:after,
+    &:before {
+        position: absolute;
+        width: 47px;
+        height: 47px;
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: -8px;
+    }
+    &:after {
+        background-image: url("/images/international-promo-shadow-left.png");
+        left: -8px;
+    }
+    &:before {
+        background-image: url("/images/international-promo-shadow-right.png");
+        right: -8px;
+    }
+
+    .promoContent {
+        // text-transform: uppercase;
+        color: $white;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

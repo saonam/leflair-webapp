@@ -1,0 +1,49 @@
+.alert-bar {
+    position: relative;
+    padding: 4px 26px;
+    display: inline-block;
+    color: white;
+    border-radius: 0 0 5px 5px;
+    @include transition;
+    visibility: hidden;
+    height: 32px;
+    @media (max-width: breakpoint-max(sm)) {
+        display: block;
+        width: 100%;
+        border-radius: 0;
+    }
+    &.show {
+        visibility: visible;
+        transform: translateY(0);
+        z-index: 10;
+    }
+    &.hide {
+        visibility: hidden;
+        transform: translateY(-32px);
+        z-index: -2;
+    }
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+}
+
+.success-bar {
+    background-color: $brand-success;
+}
+.error-bar {
+    background-color: $brand-danger;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 9px;
+    right: 6px;
+    font-size: 11px;
+}
+.close-visible {
+    display: inline-block;
+}
+.close-invisible {
+    display: none;
+}

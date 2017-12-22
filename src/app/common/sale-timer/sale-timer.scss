@@ -1,0 +1,17 @@
+.timer-row {
+    & > div {
+        padding: 0 8px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    & > div > div:first-child {
+        border-radius: 11.5px;
+        background-color: $brand-light-bg;
+        font-size: 16px;
+        font-weight: $font-weight-black;
+        padding: 0 8px;
+    }
+    & > div > div:nth-child(2) {
+        font-size: 10px;
+    }
+}

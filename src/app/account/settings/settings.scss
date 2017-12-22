@@ -1,0 +1,81 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/forms';
+
+.pageContainer {
+    display: block;
+
+    .navSection {
+        @media(max-width: breakpoint-max(sm)) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.container {
+    font-size: .875rem;
+    padding-top: 32px;
+    padding-left: 0;
+    padding-right: 0;
+    
+    @media(min-width: breakpoint-min(sm)) {
+        padding-top: 48px;
+    }
+}
+
+.pageTitle {
+    margin-bottom: 0;
+    margin-bottom: 32px;
+    @extend %h3;
+}
+
+.personal-info,
+.credit-info,
+.password {
+    margin-bottom: 32px;
+}
+
+.credit-info {
+    .credit-amount {
+        font-size: 1.25rem;
+        float: right;
+        
+    }
+    .credit-desc {
+        font-size: 0.75;
+        color: $gray;
+        margin-top: -16px;
+        
+    }
+}
+
+.personal-info,
+.password {
+    .action {
+        float: right;
+    }
+}
+
+.heading {
+    margin-bottom: 15px;
+
+    .title {
+        margin-bottom: 0;
+        font-weight: $font-weight-bold;
+        display: inline-block;
+    }
+}
+
+.content {
+    display: block;
+    .reset-margin {
+        margin-bottom: 8px;
+    }
+    .text-right {
+        text-align: right;
+    }
+}
+
+.clearfix {
+    @include clearfix;
+}

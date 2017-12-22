@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/alert';
+@import '~bootstrap/scss/buttons';
+
+.forgotPasswordWrap {
+    position: relative;
+}
+
+.forgotPassword {
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

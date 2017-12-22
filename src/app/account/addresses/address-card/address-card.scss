@@ -1,0 +1,92 @@
+@import '~bootstrap/scss/buttons';
+
+.card {
+    border: solid 1px $border-color;
+    border-radius: 3px;
+}
+
+.active {
+    border-color: $brand-primary;
+}
+
+.new-address {
+    display: table;
+    width: 100%;
+
+    @include hover-focus-active {
+        text-decoration: none;
+    }
+}
+
+.card-block {
+    padding: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    color: $brand-secondary;
+}
+
+.heading {
+    margin-bottom: 10px;
+
+    .actions {
+        margin-top: 0;
+    }
+}
+
+.title {
+    margin-bottom: 0;
+}
+  
+.full-name {
+    font-weight: $font-weight-bold;
+}
+
+.phone {
+    margin-top: 10px;
+}
+
+.taller {
+    @media (min-width: breakpoint-min(md)) {
+        height: 200px;
+
+        .card-block {
+            position: relative;
+            height: 100%;
+
+            .actions {
+                position: absolute;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+    }
+
+    @media (min-width: breakpoint-min(lg)) {
+        height: 210px;
+    }
+
+    @media (min-width: breakpoint-min(xl)) {
+        height: 200px;
+    }
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.btn-edit {
+    color: $brand-primary;
+}
+
+.btn-delete {
+    color: $state-danger-text;
+    display: block;
+}
+
+.btn-use-for-checkout {
+  margin-top: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+}

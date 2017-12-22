@@ -1,0 +1,67 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+
+.card {
+    border: solid 1px $border-color;
+    border-radius: $border-radius;
+    margin-bottom: 15px;
+    &.active {
+        border-color: $brand-primary;
+        background-color: #fafdfe;
+    }
+}
+
+.card-block {
+    padding: 15px;
+}
+
+.card-title {
+    font-weight: $font-weight-black;
+    .actions {
+        float: right;
+        a {
+            font-weight: $font-weight-base;
+            font-size: .875rem;
+        }
+    }
+}
+
+.order-summary {
+    .subtotal,
+    .shipping,
+    .voucher,
+    .credit {
+        margin-bottom: 10px;
+    }
+    .gift-card {
+        font-weight: $font-weight-base;
+        a {
+            color: $gray;
+            text-decoration: underline;
+        }
+    }
+    .total {
+        font-weight: $font-weight-black;
+        font-size: 1rem;
+    }
+}
+
+.btn-remove-voucher {
+  display: inline-block;
+  margin-left: 5px;
+
+  @include hover-focus-active {
+    text-decoration: none;
+  }
+}
+
+.icon {
+  display: block;
+  font-size: .75rem;
+  line-height: 1;
+}
+
+.voucherHelpText {
+  font-size: .75rem;
+  color: $brand-complementary;
+}

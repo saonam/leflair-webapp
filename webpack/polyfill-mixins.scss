@@ -1,0 +1,18 @@
+// These mixins are defined in the _mixins.scss file from bootstrap.
+// We can't import those from the module because the filenames are funky.
+
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    box-shadow: $shadow;
+  }
+}
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      transition: $transition-base;
+    } @else {
+      transition: $transition;
+    }
+  }
+}

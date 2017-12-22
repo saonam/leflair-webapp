@@ -1,0 +1,79 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.navSection {
+    @media(max-width: breakpoint-max(sm)) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.container {
+    font-size: .875rem;
+    padding-top: 32px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media(min-width: breakpoint-min(sm)) {
+        padding-top: 48px;
+    }
+}
+
+.pageTitle {
+    margin-bottom: 0;
+    margin-bottom: 32px;
+    @extend %h3;
+}
+
+.shipping,
+.billing {
+    margin-bottom: 32px;
+}
+
+.heading {
+    margin-bottom: 15px;
+
+    .title {
+        margin-bottom: 0;
+        font-weight: $font-weight-bold;
+        display: inline-block;
+    }
+}
+
+.address {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .card {
+        border: solid 1px $border-color;
+        border-radius: 3px;
+
+        &.new-address {
+            display: table;
+            width: 100%;
+
+            @include hover-focus-active {
+                text-decoration: none;
+            }
+
+            .card-block {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                color: $brand-secondary;
+            }
+        }
+    }
+}
+
+.card-block {
+    padding: 15px;
+}
+
+.checkout-actions {
+    .icon {
+        font-size: 12px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}

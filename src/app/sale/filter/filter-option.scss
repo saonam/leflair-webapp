@@ -1,0 +1,71 @@
+@import '~bootstrap/scss/buttons';
+
+.filter-option {
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
+.btn {
+    position: relative;
+    padding: 0 5px;
+    height: 32px;
+    white-space: initial;
+    overflow: hidden;
+    font-size: .875rem !important;
+    text-transform: capitalize;
+    font-weight: $font-weight-base;
+    line-height: 16px;
+    cursor: pointer;
+
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: 1rem;
+        padding-top: 7px!important;
+        padding-bottom: 7px!important;
+        height: 40px;
+    }
+
+    .icon {
+        font-size: 10px;
+        color: $gray;
+        display: inline-block;
+        position: absolute;
+        left: 16px;
+        top: 9px;
+
+        @media (max-width: breakpoint-max(sm)) {
+            top: 12px;
+        }
+    }
+}
+
+.style-color {
+    padding-left: 35px;
+}
+
+.option-color {
+    position: absolute;
+    width: 30px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-right: solid 1px $btn-secondary-border;
+    @include transition(all .2s ease-in-out);
+}
+
+// bootstrap fixes
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary.focus {
+    background-color: $btn-secondary-bg;
+    border-color: $brand-primary;
+    color: $brand-primary;
+}
+
+.btn-secondary.active,
+.btn-secondary.active:hover,
+.btn-secondary.active.focus {
+    background-color: #F2F2F2;
+    color: $gray;
+    border: none;
+    font-weight: $font-weight-normal;
+}

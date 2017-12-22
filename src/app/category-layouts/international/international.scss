@@ -1,0 +1,268 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/buttons';
+@import '../../common/seasonal-layout';
+
+
+.paddingTop {
+    @media (max-width: breakpoint-max(sm)) {
+        padding-top: 96px !important;
+    }
+}
+
+.btnSeeMore {
+    margin-top: 16px;
+}
+
+.first-sale-container {
+    display: block;
+    padding-bottom: $grid-gutter-width-base;
+    padding-top: $grid-gutter-width-base;
+    padding-left: $grid-gutter-width-haft;
+    padding-right: $grid-gutter-width-haft;
+    width: 100%;
+    @extend %touch-state;
+    @media (max-width: breakpoint-max(md)) {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    @media (max-width: breakpoint-max(sm)) {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.first-sale-desktop {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.image-container {
+    width: 100%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.text-container {
+    padding-left: 24px;
+    .title {
+        font-weight: $font-weight-bold;
+        padding-bottom: 4px;
+        padding-top: 16px;
+    }
+    .time-wrap {
+        display: block;
+        color: $gray;
+    }
+}
+
+.padding-remove {
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.sale-card-container {
+    .currentSale {
+        @media (min-width: breakpoint-min(sm)) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.overseas-banner {
+    width: 100%;
+    background-image: url('/images/international-banner-desktop.jpg');
+    background-size: cover;
+    background-position: center top;
+    height: 620px;
+
+    @media (max-width: breakpoint-max(sm)) {
+        background-image: url('/images/international-banner-mobile.jpg');
+        height: 600px;
+        background-position: center bottom;
+    }
+}
+
+.overseas-title {
+    padding-top: 32px;
+    margin-bottom: 20px;
+    .sectionTitle {
+        @extend %section-title;
+    }
+    .sectionSeparator {
+        @extend %separator;
+        @media (max-width: breakpoint-max(sm)) {
+            display: none;
+        }
+    }
+}
+
+.overseas-title {
+    @media (max-width: breakpoint-max(sm)) {
+        display: block;
+    }
+}
+
+.banner-description-wrapper {
+    text-align: left;
+    padding-left: 0;
+    padding-top: 80px;
+
+    @media (max-width: breakpoint-max(md)) {
+        padding-top: 94px;
+    }
+    @media (max-width: breakpoint-max(sm)) {
+        padding-top: 32px;
+        padding-left: $grid-gutter-width-haft;
+        padding-right: $grid-gutter-width-haft;
+    }
+
+    .title {
+        color: $white;
+        font-size: 40px;
+        font-weight: $font-weight-black;
+
+        @media (max-width: breakpoint-max(md)) {
+            font-size: 26px;
+        }
+    }
+
+    .mission {
+        color: $white;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 12px;
+
+        @media (max-width: breakpoint-max(md)) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+}
+
+.features {
+    margin-top: 52px;
+
+    @media (max-width: breakpoint-max(md)) {
+        margin-top: 40px;
+        display: block;
+    }
+
+    @media (max-width: breakpoint-max(sm)) {
+        margin-top: 24px;
+        width: 60%;
+    }
+
+    .feature {
+        color: rgba($white, .9);
+        font-size: 14px;
+        line-height: 16px;
+        padding-right: 8px;
+        margin-bottom: 16px;
+
+        .feature-image {
+            display: block;
+            font-size: 40px;
+            line-height: 40px;
+
+            @media (max-width: breakpoint-max(md)) {
+                font-size: 36px;
+                line-height: 36px;
+            }
+
+            &:active, &:focus {
+                background-color: transparent;
+                opacity: 1;
+            }
+
+            &.fix-image {
+                font-size: 34px;
+                line-height: 34px;
+                margin-top: 5px;
+                @media (max-width: breakpoint-max(md)) {
+                    font-size: 28px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .feature-sub-text {
+            display: block;
+            padding-top: 14px;
+
+            @media (max-width: breakpoint-max(md)) {
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+.down-navigator {
+    display: none;
+    position: fixed;
+    left: calc((100vw - 40px)/2);
+    color: white;
+    border-radius: 50%;
+    border: solid 1px white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+    -webkit-animation: upDown 2s infinite;
+    animation: upDown 2s infinite;
+    opacity: 0.7;
+
+    @media (max-width: breakpoint-max(sm)) {
+        display: block;
+    }
+}
+
+.down-navigator {
+    &.visible {
+        opacity: 0.7;
+        -webkit-transition: all 0.7s;
+        transition: all 0.7s;
+    }
+}
+.down-navigator {
+    &.invisible {
+        opacity: 0;
+        -webkit-transition: all 0.7s;
+        transition: all 0.7s;
+    }
+}
+
+@-webkit-keyframes upDown {
+    0% {
+         bottom: 10px;
+    }
+
+   50% {
+        bottom: 20px;
+   }
+
+    100% {
+         bottom: 10px;
+    }
+}
+
+@keyframes upDown {
+    0% {
+        bottom: 10px;
+    }
+
+    50% {
+        bottom: 20px;
+    }
+
+    100% {
+        bottom: 10px;
+    }
+}

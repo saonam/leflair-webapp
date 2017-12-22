@@ -1,0 +1,36 @@
+.card {
+    border: solid 1px $border-color;
+    border-radius: 3px;
+}
+
+.active {
+    border-color: $brand-primary;
+}
+
+.card-block {
+    padding: 15px;
+}
+  
+.heading {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.title {
+    margin-bottom: 0;
+    font-weight: $font-weight-bold;
+}
+
+.card-holder {
+    visibility: visible;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.btn-delete {
+    color: $state-danger-text;
+    display: block;
+    padding-bottom: 12px;
+}

@@ -1,0 +1,55 @@
+@import '~bootstrap/scss/buttons';
+
+.pageSection {
+    display: block;
+    width: 90%;
+    margin: auto auto;
+    @media (min-width: breakpoint-min(sm)) {
+        width: 60%;
+    }
+
+}
+
+.heroImage {
+    width: 260px;
+    margin: auto auto;
+    @media (min-width: breakpoint-min(sm)) {
+        padding-top: 32px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.caption {
+    text-align: center;
+
+    .title {
+        font-weight: $font-weight-bold;
+        font-size: 32px;
+        @media (min-width: breakpoint-min(sm)) {
+            padding-top: 32px;
+            font-size: 40px;
+        }
+    }
+
+    .subtitle {
+        font-size: 20px;
+        @media (min-width: breakpoint-min(sm)) {
+            font-size: 24px;
+        }
+    }
+
+    .desc {
+        color: $gray;
+        margin-bottom: 8px;
+    }
+    .desc-2 {
+        color: $gray-dark;
+    }
+
+    .btnHome {
+        text-transform: uppercase;
+    }
+}

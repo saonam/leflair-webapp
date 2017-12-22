@@ -1,0 +1,14 @@
+{
+    "SHOPPING_BAG": "Shopping Bag",
+    "YOUR_SHOPPING_BAG_IS_EMPTY": "Your shopping bag is currently empty",
+    "START_SHOPPING_NOW": "Start Shopping Now!",
+    "CONTINUE_TO_SHOPPING": "Continue shopping",
+    "PROCEED_TO_CHECKOUT": "Proceed to Checkout",
+    "ALREADY_REACHED_MAX_QUANTITY": "Item has already reached max quantity",
+    "MESSAGE_CITIBANK": "<p>Nhanh tay! Bạn được hoàn tiền <b>5%</b> cho thẻ tín dụng Citi Bank trong hôm nay.</p>",
+    "MESSAGE_NO_CITIBANK": "<p>Chủ thẻ Citi ơi! Leflair hoàn tiền <b>5%</b> ngay trong hôm nay! <a href=\"{{linkDetail}}\" target=\"blank\">Chi tiết</a></p>",
+    "MESSAGE_VPBANK": "<p>Bạn được giảm <b>150.000₫</b> cho thẻ VPBank trong hôm nay! Dùng code <b>{{code}}</b></p>",
+    "MESSAGE_NO_VPBANK": "<p> Chủ thẻ VPBank? Mua hàng trên <b>1.500.000₫</b> để được giảm <b>150.000₫</b> trong hôm nay.<a href=\"{{linkDetail}}\" target=\"blank\">Chi tiết</a></p>",
+    "MESSAGE_HSBC": "<p>Bạn được giảm <b>10%</b> cho thẻ HSBC Mastercard. Chỉ trong hôm nay. Dùng code <b>{{code}}</b></p>",
+    "MESSAGE_NO_HSBC": "<p>Chủ thẻ HSBC Mastercard? Mua hàng trên <b>1.000.000₫</b> để được giảm <b>10%</b>. <a href=\"{{linkDetail}}\" target=\"blank\">Chi tiết</a></p>"
+}

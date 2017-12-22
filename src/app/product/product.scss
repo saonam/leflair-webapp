@@ -1,0 +1,132 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.product {
+  display: block;
+  padding-top: 15px;
+}
+
+.product-header {
+    margin-bottom: 15px;
+}
+
+.brand-info {
+    margin-top: 30px;
+}
+
+.right-pane {
+  @media (min-width: breakpoint-min(lg)) {
+      padding-left: 75px;
+  }
+}
+
+.product-info {
+  margin-bottom: 16px;
+}
+
+.colors {
+  margin-top: 10px;
+
+  &+.sizes {
+    margin-top: 10px !important;
+  }
+}
+
+.add-to-bag {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.addToBagError {
+  color: $brand-danger;
+}
+
+.additional-info {
+    margin-top: 24px;
+}
+
+.product-desc {
+  margin-top: 20px;
+}
+
+.extra-info {
+    margin-top: 16px;
+    @media (max-width: breakpoint-max(sm)) {
+        margin-top: 0;
+    }
+}
+
+.lower-content {
+    margin-top: 40px;
+
+    @media (max-width: breakpoint-max(sm)) {
+        margin-top: 20px;
+    }
+}
+
+.recommendations-container {
+    margin-top: 40px;
+
+    .product-card-container .title-container {
+        display: none;
+    }
+}
+
+.recently-viewed-container {
+    margin-top: 40px;
+
+    .product-card-container .title-container {
+        display: none;
+    }
+}
+
+.full-view-mobile {
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.fixed {
+    position: fixed;
+    top: 53px;
+    @media (min-width: breakpoint-min(md)) {
+        width: 420px;
+    }
+    @media (min-width: breakpoint-min(lg)) {
+        width: 560px;
+    }
+    @media (min-width: breakpoint-min(xl)) {
+        width: 665px;
+    }
+}
+
+.slider-section {
+    position: relative;
+}
+
+.reset-pos {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+}
+
+.sale-timer {
+    text-align: center;
+    width: 100%;
+    p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    @media (min-width: breakpoint-min(lg)) {
+        width: 90%;
+    }
+}
+.flex-center {
+    justify-content: center;
+}
+.few-items-notify {
+   color: $brand-complementary;
+   font-size: 14px;
+   font-weight: $font-weight-bold;
+}

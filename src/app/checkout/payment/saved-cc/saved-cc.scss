@@ -1,0 +1,86 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/custom-forms';
+@import '~bootstrap/scss/forms';
+@import '../payment-method/payment-method';
+
+.credit-card {
+  .credit-card-form {
+    display: none;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+
+  &.active {
+    .credit-card-form {
+      display: block;
+    }
+  }
+}
+
+.cvv-field {
+  position: relative;
+
+  @media (max-width: breakpoint-max(sm)) {
+      width: 50%;
+      display: block;
+  }
+}
+
+.btn-help {
+  position: absolute;
+  top: 8px;
+  right: -35px;
+  font-size: 27px;
+  color: $gray-light;
+  
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    color: $gray-light;
+  }
+}
+
+.tooltip {
+  font-size: .75rem;
+  z-index: 99;
+  bottom: 34px;
+  left: -2px;
+  display: none;
+  width: 200px;
+
+  @media (max-width: breakpoint-max(sm)) {
+      left: -170px;
+  }
+}
+
+.tooltip-inner {
+  background-color: #FAFAFA;
+  color: $gray-dark;
+  border: solid 1px $gray-lighter;
+  padding: 6px 6px;
+  box-shadow: 0 -3px 10px 0 rgba(33,33,33,0.2);
+  border-radius: 1px;
+  display: block;
+  width: 100%;
+
+  &:before {
+    bottom: -5px;
+    left: 15px;
+    margin-left: -5px;
+    content: "";
+    border-width: 5px 5px 0 !important;
+    border-top-color: #D1D3D4 !important;
+
+    @media (max-width: breakpoint-max(sm)) {
+        left: 184px;
+    }
+  }
+}
+
+.cvv-image {
+  width: 100%;
+  height: auto;
+}
+
+.cvv-help-image {
+  width: 150px;
+}

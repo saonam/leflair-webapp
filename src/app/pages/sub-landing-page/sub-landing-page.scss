@@ -1,0 +1,201 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.page-container,
+.seasonal-page-container {
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: breakpoint-max(md)) {
+        height: 110vh;
+        background-size: 100vw;
+    }
+}
+
+.page-container {
+    background-image: url("/images/banner-sub-main.jpg");
+    background-position: center top;
+    background-color: $gray-alt;
+
+    @media (max-width: breakpoint-max(md)) {
+        background-image: url("/images/banner-sub-main-mobile.jpg");
+        background-color: #1B1819;
+    }
+}
+
+.seasonal-page-container {
+    background-color: #071F25;
+    @media (max-width: breakpoint-max(md)) {
+        
+    }
+}
+
+.hero-container {
+    padding-left: 0;
+    padding-top: 170px;
+
+    @media (max-width: breakpoint-max(md)) {
+        padding-left: $grid-gutter-width-base;
+        padding-right: $grid-gutter-width-base;
+        padding-top: 280px;
+        order: 2;
+    }
+
+    @media (max-width: breakpoint-max(sm)) {
+        padding-top: 245px;
+    }
+
+    &.seasonal-hero-container {
+        @media (max-width: breakpoint-max(md)) {
+            padding-top: 32px;
+        }
+    }
+
+    .title {
+        text-align: left;
+        font-size: 2.125rem;
+        font-weight: $font-weight-black;
+        color: #ECECEC;
+        line-height: 41px;
+        margin-bottom: 56px;
+
+        @media (max-width: breakpoint-max(md)) {
+            font-size: 1.5rem;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+    }
+}
+
+.section-hero {
+    @media(max-width: breakpoint-max(md)) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.heroImg {
+    padding-top: 110px;
+    padding-left: 96px;
+    @media(max-width: breakpoint-max(md)) {
+        order: 1;
+        padding-left: 12px;
+        padding-top: 24px;
+        margin: auto;
+        width: 520px;
+    }
+    @media(max-width: breakpoint-max(md)) {
+        width: 80%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    } 
+}
+
+.section-wrap {
+    display: block;
+
+    &.section-wrap-1 {
+        background-color: #E9F7F8;
+    }
+
+    &.section-wrap-2 {
+        background-color: #FCE7E3;
+    }
+
+    &.section-wrap-3 {
+        background-color: #FFF1DE;
+    }
+}
+
+.section {
+    height: 740px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 740px;
+
+    @media (max-width: breakpoint-max(md)) {
+        background-position: center top;
+        background-size: 350px;
+        height: 600px;
+    }
+
+    &.section-1 {
+        background-image: url("/images/banner-side-1.jpg");
+    }
+
+    &.section-2 {
+        background-image: url("/images/banner-side-2.jpg");
+    }
+
+    &.section-3 {
+        background-image: url("/images/banner-side-3.jpg");
+    }
+}
+
+.section-container {
+    display: block;
+    padding-top: 250px;
+
+    @media (max-width: breakpoint-max(md)) {
+        padding-top: 350px;
+    }
+
+    .section-title {
+        @extend %h2;
+        font-weight: $font-weight-black;
+        line-height: 1.4;
+
+        @media (max-width: breakpoint-max(md)) {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    .sub-title {
+        font-size: 18px;
+        padding-top: 16px;
+
+        @media (max-width: breakpoint-max(md)) {
+            text-align: center;
+        }
+    }
+
+}
+
+.subscription-container {
+    background-color: #F2F6FA;
+    padding-top: 40px;
+    padding-bottom: 64px;
+    margin-bottom: -40px;
+    @include transition;
+  
+    @media (min-width: breakpoint-min(sm)) {
+      margin-bottom: -26px;
+      padding-bottom: 56px;
+    }
+  
+    @media (min-width: breakpoint-min(md)) {
+      margin-bottom: -20px;
+    }
+  
+    @media (min-width: breakpoint-min(lg)) {
+      margin-bottom: -72px;
+    }
+}
+  
+.content-wrap {
+    width: 100%;
+
+    @media (min-width: breakpoint-min(sm)) {
+    width: 80%;
+    }
+
+    @media (min-width: breakpoint-min(md)) {
+    width: 50%;
+    }
+}

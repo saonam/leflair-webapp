@@ -1,0 +1,175 @@
+@import '../../product/images-slider/csslider';
+
+.bannerContainer {
+    display: block;
+    width: 100%;
+    @media (max-width: breakpoint-max(sm)) {
+        margin-bottom: 8px;
+    }
+}
+
+.imageContainer {
+    display: block;
+    padding-left: $grid-gutter-width-haft;
+    padding-right: $grid-gutter-width-haft;
+    padding-top: 0;
+    width: 100%;
+    position: relative;
+    
+
+    &:after,
+    &:before {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 30px;
+        width: 50%;
+        top: 80%;
+        max-width:300px;
+        background: $white;
+        box-shadow: 0 16px 24px 0 rgba(33,33,33,0.3);
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+        @media (max-width: breakpoint-max(sm)) {
+            left: 10px;
+            box-shadow: 0 9px 16px 0 rgba(33,33,33,0.7);
+            bottom: 10px;
+        }
+    }
+
+    &:after {
+        -webkit-transform: rotate(3deg);
+        -moz-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+        transform: rotate(3deg);
+        right: 30px;
+        left: auto;
+        @media (max-width: breakpoint-max(sm)) {
+            right: 10px;
+        }
+    }
+
+    @media(max-width: breakpoint-max(sm)) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.bannerImg {
+    width: 100%;
+    height: auto;
+}
+
+.slider-container {
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.image {
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+
+    ul li {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &:last-child {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.csslider {
+    position: relative;
+    padding-top: 0;
+    width: 100%;
+}
+
+.csslider > ul {
+  padding-bottom: 24px;
+  @media (max-width: breakpoint-max(sm)) {
+      padding-bottom: 16px;
+      margin-bottom: 0;
+  }
+}
+
+.csslider > ul > li {
+    overflow: visible;
+}
+
+.csslider > .navigation {
+  bottom: 48px;
+  left: calc(50% - 2px);
+
+  @media (max-width: breakpoint-max(sm)) {
+      bottom: 0;
+  }
+}
+
+.csslider > .arrows {
+    height: 100%;
+    z-index: auto;
+}
+
+.csslider > .arrows label {
+  color: $white;
+  padding: 0;
+  top: calc(50% - 32px);
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  background-color: $gray-light;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.csslider.infinity > input:first-of-type:checked ~ .arrows label.goto-last,
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(0),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(1),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(2),
+.csslider > input:nth-of-type(4):checked ~ .arrows > label:nth-of-type(3),
+.csslider > input:nth-of-type(5):checked ~ .arrows > label:nth-of-type(4),
+.csslider > input:nth-of-type(6):checked ~ .arrows > label:nth-of-type(5),
+.csslider > input:nth-of-type(7):checked ~ .arrows > label:nth-of-type(6),
+.csslider > input:nth-of-type(8):checked ~ .arrows > label:nth-of-type(7),
+.csslider > input:nth-of-type(9):checked ~ .arrows > label:nth-of-type(8),
+.csslider > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(9),
+.csslider > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(10) {
+  left: 28px;
+  @media (max-width: breakpoint-max(sm)) {
+      left: 12px;
+  }
+  
+}
+
+.csslider.infinity > input:last-of-type:checked ~ .arrows label.goto-first,
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(4),
+.csslider > input:nth-of-type(4):checked ~ .arrows > label:nth-of-type(5),
+.csslider > input:nth-of-type(5):checked ~ .arrows > label:nth-of-type(6),
+.csslider > input:nth-of-type(6):checked ~ .arrows > label:nth-of-type(7),
+.csslider > input:nth-of-type(7):checked ~ .arrows > label:nth-of-type(8),
+.csslider > input:nth-of-type(8):checked ~ .arrows > label:nth-of-type(9),
+.csslider > input:nth-of-type(9):checked ~ .arrows > label:nth-of-type(10),
+.csslider > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(11),
+.csslider > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(12) {
+
+  right: 28px;
+  @media (max-width: breakpoint-max(sm)) {
+      right: 12px;
+  }
+}

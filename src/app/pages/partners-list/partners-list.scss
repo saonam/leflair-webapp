@@ -1,0 +1,263 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/buttons';
+
+.section-container {
+    display: block;
+    padding-top: 88px;
+    padding-bottom: 112px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("/images/partners/citibank-hero-bg.jpg");
+    background-color: $gray-lightest;
+    height: 620px;
+
+    @media(max-width: breakpoint-max(md)) {
+        padding-right: $grid-gutter-width-base;
+        padding-left: $grid-gutter-width-base;
+        padding-bottom: 48px;
+        padding-top: 24px;
+        height: 516px;
+        background-image: url("/images/partners/citibank-hero-bg-mobile.jpg");
+    }
+}
+
+.section1 {
+    @media(max-width: breakpoint-max(md)) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &.section1-text {
+        padding-right: 80px;
+
+        @media(max-width: breakpoint-max(md)) {
+            order: 2;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .title {
+            font-weight: $font-weight-black;
+            color: $gray-darkest;
+            margin-top: 72px;
+
+            @media(max-width: breakpoint-max(md)) {
+                text-align: center;
+                margin-top: 24px;
+                font-size: 28px;
+                line-height: 1.2;
+            }
+        }
+    
+        .body {
+            font-size: 20px;
+            color: $gray-darkest;
+            margin-top: 16px;
+            
+            @media(max-width: breakpoint-max(md)) {
+                text-align: center;
+            }
+        }
+        p {
+            @media(max-width: breakpoint-max(md)) {
+                text-align: center;
+            }
+        }
+    }
+
+    &.section1-img {
+        margin-top: 32px;
+        @media(max-width: breakpoint-max(md)) {
+            order: 1;
+            margin-top: 8px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .img {
+            width: 100%;
+
+            @media(max-width: breakpoint-max(md)) {
+                width: 320px;
+                margin: auto;
+                height: auto;
+            }
+            @media(max-width: breakpoint-max(sm)) {
+                width: 300px;
+            }
+        }
+    }
+
+}
+
+.section-buy {
+    background-color: $white;
+    margin-top: $grid-gutter-width-base;
+    @media(max-width: breakpoint-max(sm)) {
+        margin-top: 16px;
+    }
+}
+
+.buy-wrap {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: top center;
+    display: block;
+    height: 560px;
+    background-color: $gray-lightest;
+
+    @media(max-width: breakpoint-max(sm)) {
+        height: 320px;
+    }
+ 
+    &.women {
+        background-image: url("/images/partners/citibank-shop-woman.jpg");
+
+        @media(max-width: breakpoint-max(sm)) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &.men {
+        background-image: url("/images/partners/citibank-shop-man.jpg");
+    }
+}
+
+.cta-wrap {
+    position: relative;
+    display: inline-block;
+    margin-top: 232px;
+    text-align: center;
+
+    @media(max-width: breakpoint-max(sm)) {
+        margin-top: 112px;
+    }
+
+    .title {
+        font-size: 40px;
+        text-transform: capitalize;
+        color: $gray-darkest;
+        font-weight: $font-weight-black;
+        margin-left: -12px;
+        
+        @media(max-width: breakpoint-max(sm)) {
+            font-size: 32px;
+            margin-bottom: -8px;
+        }
+    }
+
+    .cta {
+        text-transform: uppercase;
+        color: $gray !important;
+        font-size: 1rem;
+        position: relative;
+
+    }
+
+    &.cta-women {
+        float: right;
+        margin-right: 96px;
+
+        @media(max-width: breakpoint-max(sm)) {
+            margin-right: 48px;
+        }
+    }
+    &.cta-men {
+        float: left;
+        margin-left: 96px;
+
+        @media(max-width: breakpoint-max(sm)) {
+            margin-left: 48px;
+        }
+    }
+}
+
+.icon {
+    line-height: 28px;
+    display: inline-block;
+    font-size: 12px;
+    opacity: .7;
+    margin-left: 1px;
+}
+
+.section-more-info {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 72px;
+    padding-bottom: 16px;
+    border-top: solid 1px $gray-light;
+
+    .text {
+        margin-bottom: 40px;
+    }
+
+    .image {
+        height: auto;
+        margin: auto;
+        margin-bottom: 32px;
+    }
+}
+
+.subscription-container {
+    background-color: #F2F6FA;
+    padding-top: 16px;
+    padding-bottom: 32px;
+    margin-top: 24px;
+    margin-bottom: -40px;
+  
+    @media (min-width: breakpoint-min(sm)) {
+      margin-bottom: -26px;
+      padding-bottom: 56px;
+    }
+  
+    @media (min-width: breakpoint-min(md)) {
+      margin-bottom: -20px;
+    }
+  
+    @media (min-width: breakpoint-min(lg)) {
+      margin-bottom: -72px;
+    }
+    
+    &.fade-out {
+        height: 0;
+        opacity: 0;
+    }
+  }
+
+.content-wrap {
+    width: 100%;
+  
+    @media (min-width: breakpoint-min(sm)) {
+      width: 80%;
+    }
+  
+    @media (min-width: breakpoint-min(md)) {
+      width: 50%;
+    }
+}
+
+.term-condition {
+    padding-top: 56px;
+    padding-bottom: 64px;
+    .title {
+        font-weight: $font-weight-black;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    .list {
+        text-align: left;
+        font-size: 1rem;
+    }
+}
+
+.goToTerm {
+    font-size: 12px;
+    color: $gray;
+    text-transform: uppercase;
+    text-decoration: underline;
+    @media (max-width: breakpoint-max(md)) {
+        text-align: center;
+    }
+}

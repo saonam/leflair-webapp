@@ -1,0 +1,133 @@
+.products-carousel {
+    position: relative;
+}
+
+.outerbox {
+    overflow: hidden;
+
+    &::-webkit-scrollbar { 
+        display: none;
+    }
+
+    @media (max-width: breakpoint-max(lg)) {
+        overflow: scroll;
+    }
+    
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: $grid-gutter-width-haft;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.innerbox {
+    display: table;
+}
+
+.product-card-container {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+    padding-left: $grid-gutter-width-haft;
+    padding-right: $grid-gutter-width-haft;
+    margin-bottom: 0;
+
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+    
+    &:last-child {
+        padding-right: 0;
+        @media (max-width: breakpoint-max(sm)) {
+            padding-right: $grid-gutter-width-haft;
+        }
+    }
+}
+
+.product-card {
+    width: 204px;
+
+    @media (max-width: breakpoint-max(lg)) {
+        width: 150px;
+    }
+
+    @media (max-width: breakpoint-max(md)) {
+        width: 140px;
+    }
+
+    .title-container {
+        @media (max-width: breakpoint-max(xs)) {
+            font-size: $font-size-sm;
+        }
+
+        .brand, .title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: 71px;
+    height: 46px;
+    width: 46px;
+
+    @media (min-width: breakpoint-min(xl)) {
+        top: 116px;
+    }
+
+    .hide {
+        visibility: hidden;
+    }
+
+    > .arrow-btn {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: $gray-lighter;
+        text-decoration: none;
+        cursor: pointer;
+
+        @include hover-focus-active {
+            color: $gray-light;
+            text-decoration: none;
+        }
+
+        > .icon {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            padding: 12px;
+            font-size: 22px;
+            border-radius: 50%;
+        }
+    }
+
+    @media (max-width: breakpoint-max(md)) {
+        display: none;
+    }
+
+}
+
+.left {       
+    @media (min-width: breakpoint-min(lg)) {
+          left: -40px;
+    }
+    @media (min-width: breakpoint-min(xl)) {
+          left: -48px;
+    }
+}
+.right {
+    @media (min-width: breakpoint-min(lg)) {
+          right: -40px;
+    }
+    @media (min-width: breakpoint-min(xl)) {
+          right: -48px;
+    }
+}

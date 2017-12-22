@@ -1,0 +1,126 @@
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/bootstrap-grid';
+
+.order {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.card {
+  border: solid 1px $gray-lightest;
+  border-radius: $border-radius;
+}
+
+.heading {
+  font-size: .875rem;
+  background-color: $gray-lightest;
+  padding: 8px 12px;
+  cursor: pointer;
+
+  @media (max-width: breakpoint-max(sm)) {
+    padding: 10px auto;
+  }
+
+
+  .title {
+    margin-bottom: 0;
+    font-weight: $font-weight-black;
+    display: inline-block;
+    @extend %hover-state;
+    @media (max-width: breakpoint-max(sm)) {
+      width: 100%;
+      font-weight: $font-weight-bold !important;
+    }
+  }
+
+  .order-status {
+    float: right;
+    color: $gray;
+    
+    span {
+      i {
+        padding-left: 4px;
+        font-style: normal;
+      }
+    }
+
+    @media (max-width: breakpoint-max(sm)) {
+      float: left;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .icon-expand {
+    font-size: 8px;
+    margin-left: 4px;
+
+    @media (max-width: breakpoint-max(sm)) {
+      float: right;
+      position: absolute;
+      right: 0;
+      top: -16px;
+    }
+  }
+}
+
+.body {
+    padding: 15px;
+    .separator {
+      padding-left: 4px;
+      padding-right: 4px;
+      color: $gray-lighter;
+    }
+}
+
+.products {
+    border-bottom: solid 1px $gray-lightest;
+    margin-bottom: 16px;
+}
+
+.product {
+  margin-bottom: 15px;
+}
+
+.details {
+    > div {
+        margin-bottom: 15px;
+    }
+
+    .body {
+      padding: 0;
+    }
+}
+
+.actions {
+  .return-policy {
+    float: right;
+  }
+    @media (max-width: breakpoint-max(sm)) {
+      text-align: center;
+      .text, .return-policy {
+          display: block;
+          text-align: center;
+          float: none;
+      }
+    }
+}
+
+.detail-title {
+  font-weight: $font-weight-black;
+  padding-bottom: 8px;
+}
+
+.total {
+  margin-top: 10px;
+  font-weight: $font-weight-black;
+
+  div:last-child {
+    font-weight: $font-weight-black;
+  }
+}
+.external-link {
+  font-size: 10px;
+  margin-left: 4px;
+}

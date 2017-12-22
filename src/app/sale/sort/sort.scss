@@ -1,0 +1,51 @@
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/dropdown';
+
+.btn {
+    padding: 8px 10px 7px 14px;
+    font-size: .75rem !important;
+    font-weight: $font-weight-normal;
+    text-transform: none;
+    @media (max-width: breakpoint-max(sm)) {
+        width: 100%;
+    }
+
+}
+
+.dropdown {
+    display: inline-block;
+    @media (max-width: breakpoint-max(sm)) {
+        width: calc(100% + 2px);
+    }
+    .btn {
+        overflow: hidden;
+        &::after {
+        display: none;
+        }
+    }
+}
+
+.dropdown-menu {
+    min-width: 100%;
+
+    .dropdown-item {
+      @media (max-width: breakpoint-max(sm)) {
+          // padding: 8px auto; 
+          padding-top: 8px;
+          padding-bottom: 8px;
+      }
+    }
+}
+
+.btn-text {
+    @extend %line-wrap-simple;
+    max-width: 80%;
+
+}
+.icon {
+    font-size: 6px;
+    padding-left: 8px;
+    @media (max-width: breakpoint-max(sm)) {
+        display: none;
+    }
+}

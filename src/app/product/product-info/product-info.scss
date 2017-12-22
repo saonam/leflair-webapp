@@ -1,0 +1,42 @@
+.product-info {
+    @media (max-width: breakpoint-max(sm)) {
+        margin-top: 0;
+    }
+
+    @extend %mobile-font-weidth-reset;
+}
+
+.brand {
+    font-weight: $font-weight-black;
+
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: 0.875rem;
+        margin-bottom: 2px;
+    }
+}
+
+.title {
+  font-size: 1.25rem !important;
+  color: $gray-dark;
+  font-weight: $font-weight-normal;
+
+  @media (max-width: breakpoint-max(sm)) {
+      font-size: 1.25rem;
+      margin-bottom: 2px;
+  }
+}
+
+.retail-price {
+    color: $gray;
+    font-weight: $font-weight-base;
+    text-decoration: line-through;
+    font-size: 1.25rem;
+    @extend %mobile-font-weidth-reset;
+    padding-right: 8px;
+}
+
+.sale-price {
+    color: $brand-primary;
+    font-weight: $font-weight-black;
+    font-size: 1.5rem;
+}

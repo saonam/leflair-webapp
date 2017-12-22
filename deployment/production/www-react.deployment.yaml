@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: www
+  name: www-react
+spec:
+  template:
+    metadata:
+      labels:
+        app: www-react
+        environment: production
+        context: public
+    spec:
+      containers:
+      - name: www-react
+        image: asia.gcr.io/triple-kingdom-101205/www-react:{{HASH}}
+        imagePullPolicy: Always
+        command: ["node", "/app/server.js"]
+        ports:
+        - name: node
+          containerPort: 8080
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 800Mi
+            cpu: 400m
+        env:
+        - name: NODE_ENV
+          value: production
+        - name: SENTRY_DSN
+          valueFrom:
+            secretKeyRef:
+              name: sentry
+              key: client.dsn
+        - name: SENTRY_ENVIRONMENT
+          value: production

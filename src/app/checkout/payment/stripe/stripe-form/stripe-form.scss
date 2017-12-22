@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/forms';
+
+.card-list {
+  width: auto;
+  height: 25px;
+  display: inline-block;
+  float: right;
+  margin-right: 0;
+  margin-top: -1px;
+
+  img {
+      width: auto;
+      height: 100%;
+  }
+}

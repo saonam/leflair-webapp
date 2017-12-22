@@ -1,0 +1,329 @@
+.productCard {
+    display: block;
+    @extend %touch-state;
+    
+    @include hover-focus-active {
+        text-decoration: none;
+    }
+}
+.sale-product-card, .home-sale {
+    background-color: #F2F6FA;
+    background-image: url('/images/spinner-loading-animated-bg.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.home-sale {
+    background-size: 150px 150px;
+}
+@media (max-width: 991px) {
+    .sale-product-card {
+        height: 270px;
+    }
+}
+@media (max-width: 767px) {
+    .sale-product-card {
+        height: 336px;
+    }
+}
+@media (max-width: 575px) {
+    .sale-product-card {
+        height: 62vw;
+    }
+}
+@media (min-width: 992px) {
+    .sale-product-card {
+        height: 370px;
+    }
+}
+@media (min-width: 1200px) {
+    .sale-product-card {
+        height: 445px;
+    }
+}
+:global(.filters-expanded) :local(.sale-product-card){
+    @media (max-width: 991px) {
+        height: 270px;
+    }
+
+    @media (max-width: 767px) {
+        height: 220px;
+    }
+
+    @media (max-width: 575px) {
+        height: 62vw;
+    }
+
+    @media (min-width: 992px) {
+        height: 270px;
+    }
+
+    @media (min-width: 1200px) {
+        height: 326px;
+    }
+}
+
+@media (max-width: 991px) {
+    .home-sale {
+        height: 175px;
+    }
+}
+@media (max-width: 767px) {
+    .home-sale {
+        height: 175px;
+    }
+}
+@media (max-width: 575px) {
+    .home-sale {
+        height: 175px;
+    }
+}
+@media (min-width: 992px) {
+    .home-sale {
+        height: 187.5px;
+    }
+}
+@media (min-width: 1200px) {
+    .home-sale {
+         height: 255px;
+    }
+}
+.imageContainer {
+    position: relative;
+    width: 100%;
+    margin:0 auto;
+}
+
+.image {
+    width: 100%;
+    display: block;
+    left:0;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+}
+
+.soldOutOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    overflow: hidden;
+
+    .text {
+        position: relative;
+        color: $white;
+        font-size: $font-size-h2;
+        font-weight: $font-weight-base;
+        text-transform: uppercase;
+        margin-top: calc(50%);
+    }
+}
+
+.titleContainer {
+    margin-top: 15px;
+
+    @media (max-width: breakpoint-max(sm)) {
+        margin-top: 10px;
+        padding-left: $grid-gutter-width-haft;
+    }
+
+    @include hover-focus-active {
+        .brand, .title {
+            text-decoration: underline;
+        }
+    }
+}
+
+:global(#products-carousel) .titleContainer,
+:global(#product-carousel-recently-viewed) .titleContainer {
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: 0;
+        padding-right: $grid-gutter-width-haft;
+
+    }
+}
+
+.brand {
+    font-weight: $font-weight-normal;
+    font-size: .75rem;
+    margin-bottom: 4px;
+
+    @media (max-width: breakpoint-max(sm)) {
+        font-weight: $font-weight-normal;
+        font-size: .75rem;
+    }
+}
+
+.title {
+    color: $gray-dark;
+    font-size: .875rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: 2px;
+    @extend %line-wrap-simple;
+
+    @media (max-width: breakpoint-max(md)) {
+        font-size: .875rem;
+    }
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: .75rem;
+        font-weight: $font-weight-normal;
+        margin-bottom: 0;
+    }
+}
+
+.retailPrice {
+    color: $gray;
+    font-weight: $font-weight-base;
+    text-decoration: line-through;
+    font-size: 1rem;
+    letter-spacing: -0.96px;
+    margin-right: 8px;
+    @media (max-width: breakpoint-max(md)) {
+        font-size: 1rem;
+    }
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: .8125rem;
+        margin-right: 4px;
+    }
+}
+
+.salePrice {
+    color: $brand-primary;
+    font-weight: $font-weight-black;
+    font-size: 1.125rem;
+    letter-spacing: -0.86px;
+    @media (max-width: breakpoint-max(md)) {
+        font-size: 1rem;
+    }
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: .875rem;
+    }
+}
+
+:global(#products-carousel) .brand,
+:global(#product-carousel-recently-viewed) .brand {
+    font-weight: $font-weight-black;
+    font-size: .75rem;
+}
+
+:global(#products-carousel) .retailPrice, 
+:global(#products-carousel) .salePrice,   
+:global(#product-carousel-recently-viewed) .retailPrice,   
+:global(#product-carousel-recently-viewed) .salePrice  {
+    font-size: .875rem;
+    @media (max-width: breakpoint-max(md)) {
+        font-size: .75rem;
+    }
+}
+:global(#products-carousel) .title,
+:global(#product-carousel-recently-viewed) .title {
+    display: none;
+}
+:global(#products-carousel) .brand,
+:global(#product-carousel-recently-viewed) .brand {
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .sale-placeholder {
+      width: 216px;
+      height: 270px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sale-placeholder {
+      width: 269px;
+      height: 336px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sale-placeholder {
+      width: 50vw;
+      height: 60vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .sale-placeholder {
+      width: 296px;
+      height: 370px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sale-placeholder {
+      width: 356px;
+      height: 445px;
+  }
+}
+
+@media (max-width: 991px) {
+  .home-sale-placeholder {
+      height: 175px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-sale-placeholder {
+      height: 175px;
+  }
+}
+
+@media (max-width: 575px) {
+  .home-sale-placeholder {
+      height: 175px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .home-sale-placeholder {
+      height: 187.5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-sale-placeholder {
+      height: 255px;
+  }
+}
+
+//** for A/B Testing ** //
+.variant-card {
+    .sale-product-card {
+        @media (min-width: breakpoint-min(lg)) {
+            height: 270px;
+        }
+
+        @media (min-width: breakpoint-min(xl)) {
+            height: 326px;
+        }
+    }
+
+}
+
+.variant-card {
+    .brand {
+        font-size: .75rem;
+    }
+
+    .title {
+        font-size: .875rem;
+        font-weight: $font-weight-normal;
+    }
+
+    .retailPrice {
+        font-size: 1rem;
+    }
+
+    .salePrice {
+        font-size: 1rem;
+    }
+
+}

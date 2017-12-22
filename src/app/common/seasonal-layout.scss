@@ -1,0 +1,26 @@
+.seasonalLayout {
+    background-image: url("/images/bg-pattern-4.jpg"); 
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 294px 235px;
+    
+    & .container,
+    & .homeContainer {
+        box-shadow: 0 0 9px 0 rgba(181,177,169,0.24);
+        padding-bottom: 40px;
+        background-color: $white;
+        @media (max-width: breakpoint-max(sm)) {
+            box-shadow: none;
+        }
+    }
+
+    .topShadow {
+        box-shadow: 0 5px 0 0 #FFF, 0 0 13px 0 rgba(188,188,188,0.30),  inset 0 6px 0 0 #05B5DE, inset 0 30px 0 0 #FFF;
+    }
+
+    .international-container {
+        @media(min-width: breakpoint-min(sm)) {
+            top: -30px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.card {
+    border: solid 1px $border-color;
+    border-radius: $border-radius;
+    margin-bottom: 15px;
+    &.active {
+        border-color: $brand-primary;
+        background-color: #fafdfe;
+    }
+}
+
+.card-block {
+    padding: 15px;
+}
+
+.dot-seperator {
+    color: $gray;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.secondAddress {
+  margin-top: 15px;
+}
+
+.deliveryNote {
+  margin-top: 15px;
+}
+
+.addDeliveryNote {
+  color: $gray;
+  text-decoration: underline;
+}

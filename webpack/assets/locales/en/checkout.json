@@ -1,0 +1,23 @@
+{
+    "PENDING_CONTENT_1": "We are processing your order. The transaction might take longer than usual due to your bank service.",
+    "PENDING_CONTENT_2": "Once your bank approves your order we will call you within 6 hours to verify your order. An order confirmation email will also be sent to your email address",
+    "SUCESS_YOUR_ORDER": "Your order",
+    "SUCESS_PLACED": "has been placed.",
+    "SUCESS_EST_TIME": "Estimated delivery time:",
+    "SUCESS_CALL_YOU": "We will call you within 6 hours to verify your order. An order confirmation email has been sent to your email address",
+    "BACK_TO_CHECKOUT": "Back to Checkout",
+    "MEMBER_CHECKOUT": "Member's Checkout",
+    "MEMBER_CHECKOUT_DESC": "Shopped with us before? Please sign in to your Leflair account for express checkout, or proceed with Facebook.",
+    "SIGN_IN_EMAIL": "Sign in for express checkout",
+    "SIGN_IN_FACEBOOK": "Sign in with Facebook",
+    "GUEST_CHECKOUT": "Guest Checkout",
+    "GUEST_CHECKOUT_DESC": "New to Leflair? Welcome! Enter your information below to check out.",
+    "GUEST_CHECKOUT_DESC_SHORT": "Checkout without creating an account. You can still become a member later",
+    "GUEST_CHECKOUT_CTA": "Continue as a Guest",
+    "GUEST_CHECKOUT_DESC_2": "For fast lightening checkout",
+    "ERROR_REGISTERED_EMAIL": "New to Leflair? Welcome! Enter your information below to check out.",
+    "STEP_1": "Address / Sign in",
+    "STEP_2": "Payment",
+    "SUCCESS_DIVIDE_ORDERS": "Your orders has been placed. It will be devided into {{qty}} sub orders below:",
+    "ARRIVES_IN_NEXT_X_DAYS": "Arrives in next {{from}}-{{to}} days"
+}

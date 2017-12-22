@@ -1,0 +1,15 @@
+.separator {
+    position: relative;
+    padding: 4px 0;
+}
+
+.orText {
+    position: absolute;
+    width: 50px;
+    left: calc(50% - 25px);
+    top: 4px;
+    text-align: center;
+    background-color: $white;
+    line-height: 2rem;
+    font-size: .75rem;
+}

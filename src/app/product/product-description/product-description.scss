@@ -1,0 +1,166 @@
+@import '~bootstrap/scss/tables';
+
+.group {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: solid 1px $border-color;
+
+  &:not(.panel-open) {
+    .panel-title {
+      .about-the-brand-logo, .btn-collapse .expanded {
+          display: none;
+      }
+    }
+  }
+}
+
+.about-the-brand-logo {
+  margin-bottom: 16px;
+}
+
+.panel-open {
+  :global(.collapse) {
+    display: block;
+  }
+
+  .panel-title {
+    font-weight: $font-weight-black;
+
+    .about-the-brand-heading, .btn-collapse .collapsed {
+      display: none;
+    }
+  }
+}
+
+.about-the-brand {
+  .heading {
+    font-weight: $font-weight-bold;
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: 1.125rem;
+    }
+  }
+    
+  .desc {
+    @extend %mobile-font-weidth-reset;
+
+    @media (max-width: breakpoint-max(sm)) {
+        font-weight: $font-weight-bold;
+        font-size: 1rem;
+    }
+  }
+}
+
+.panel-title {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  
+  a {
+      &:hover,
+      &:focus,
+      &:active {
+          color: $brand-secondary;
+          text-decoration: none;
+      }
+
+  }
+}
+
+.accordion-toggle {
+  display: block;
+  color: $brand-secondary;
+  text-decoration: none;
+}
+
+.title {
+  padding-right: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+}
+
+.btn-collapse {
+  float: right;
+  margin-right: -25px;
+}
+
+.panel-collapse {
+  margin-top: 15px;
+  font-weight: $font-weight-base;
+  font-size: .875rem;
+  color: $gray-dark;
+}
+
+.product-info, .material-care, .size-fit {
+  @extend %mobile-font-weidth-reset;
+
+  @media (max-width: breakpoint-max(sm)) {
+      font-size: 1rem;
+  }
+
+  > div {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &::before {
+      content: '•';
+      padding: 0 10px;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.size-table {
+  margin-top: 10px;
+}
+
+:global(#size-table) {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+    color: $gray-dark;
+  }
+}
+
+.table {
+    margin-bottom: 0;
+    font-size: .75rem;
+    color: $gray;
+
+    thead tr th, tbody tr td {
+        border: none;
+        text-align: center;
+    }
+
+    thead tr {
+        background-color: lighten($gray-lighter, 13%);
+
+        th {
+            font-weight: $font-weight-bold;
+            vertical-align: middle;
+        }
+    }
+
+    tbody tr {
+        &:nth-child(odd) {
+            background-color: lighten($gray-lighter, 16%);
+        }
+
+        td {
+            &:first-child {
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}
+
+.desc-list {
+  padding-left: 24px;
+
+  & ul {
+    padding-left: 16px;
+  }
+}

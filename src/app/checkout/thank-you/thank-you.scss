@@ -1,0 +1,53 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.create-account {
+    margin-top: 20px;
+}
+
+.col {
+    float: none;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: $border-radius;
+    background-color: #EEF8FA;
+}
+
+.card-block {
+    padding: 24px 32px;
+
+    @media (max-width: breakpoint-max(sm)) {
+        padding: 15px;
+    }
+}
+
+.card-title {
+    font-weight: $font-weight-base;
+}
+
+.card-text {
+  font-size: .875rem;
+}
+
+.create-account-form {
+    margin-top: 16px;
+}
+
+.remove-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.you-may-like {
+  margin-top: 30px;
+}
+
+.continue-shopping {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-padding-reset {
+     padding-bottom: 56px !important;
+}

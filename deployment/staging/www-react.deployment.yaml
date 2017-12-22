@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: www-staging
+  name: www-react
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: www-react
+        environment: staging
+        context: public
+    spec:
+      containers:
+      - name: www-react
+        image: asia.gcr.io/triple-kingdom-101205/www-react:{{HASH}}
+        imagePullPolicy: Always
+        command: ["node", "/app/server.js"]
+        ports:
+        - name: node
+          containerPort: 8080
+        env:
+        - name: NODE_ENV
+          value: staging
+        - name: SENTRY_DSN
+          valueFrom:
+            secretKeyRef:
+              name: sentry
+              key: client.dsn
+        - name: SENTRY_ENVIRONMENT
+          value: staging

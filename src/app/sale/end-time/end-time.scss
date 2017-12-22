@@ -1,0 +1,35 @@
+.end-time {
+  color: $gray !important;
+  margin-top: 0;
+
+  @media (max-width: breakpoint-max(xs)) {
+    margin-top: -1px;
+  }
+}
+
+.icon {
+  @media (max-width: breakpoint-max(sm)) {
+    font-size: 0.875rem;
+    display: none;
+  }
+
+  @media (max-width: breakpoint-max(xs)) {
+      display: none;
+  }
+}
+
+.text {
+  font-weight: $font-weight-base;
+  
+  @media (max-width: breakpoint-max(sm)) {
+    font-size: 0.875rem;
+  }
+}
+
+.timer {
+  font-weight: $font-weight-base;
+
+  @media (max-width: breakpoint-max(sm)) {
+    font-size: 0.875rem;
+  }
+}

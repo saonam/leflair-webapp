@@ -1,0 +1,20 @@
+.cart-product {
+    display: table;
+    width: 100%;
+}
+
+.image {
+    display: table-cell;
+    width: 100px;
+}
+
+.info {
+    display: table-cell;
+    padding-left: 15px;
+    vertical-align: top;
+}
+
+.name {
+    font-weight: $font-weight-bold;
+    margin-bottom: 10px;
+}

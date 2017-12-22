@@ -1,0 +1,22 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.thank-you {
+  padding-top: 24px;
+
+  p {
+      margin-bottom: 10px;
+      font-size: .875rem;
+  }
+}
+
+.col {
+    float: none;
+    margin: 0 auto;
+}
+
+.heading {
+    margin-bottom: 20px;
+    color: $brand-primary;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+}

@@ -1,0 +1,23 @@
+{
+    "PENDING_CONTENT_1": "Đơn hàng của bạn đang được xử lý. Giao dịch có thể diễn ra chậm hơn dự kiến tùy vào dịch vụ ngân hàng.",
+    "PENDING_CONTENT_2": "Chúng tôi sẽ liên hệ lại trong vòng 6h để xác nhận đơn hàng ngay khi giao dịch được ngân hàng thông qua. Thư xác nhận cũng sẽ được gửi đến địa chỉ email",
+    "SUCESS_YOUR_ORDER": "Đơn hàng",
+    "SUCESS_PLACED": "đã được đặt.",
+    "SUCESS_EST_TIME": "Thời gian giao hàng dự kiến:",
+    "SUCESS_CALL_YOU": "Chúng tôi sẽ liên hệ bạn trong vòng 6h để xác nhận đơn hàng. Thư xác nhận cũng đã được gửi đến địa chỉ email",
+    "BACK_TO_CHECKOUT": "Quay lại Đặt hàng",
+    "MEMBER_CHECKOUT": "Đã là thành viên?",
+    "MEMBER_CHECKOUT_DESC": "Đăng nhập để thanh toán nhanh và theo dõi đơn hàng.",
+    "SIGN_IN_EMAIL": "Đăng nhập bằng email",
+    "SIGN_IN_FACEBOOK": "Đăng nhập bằng Facebook",
+    "GUEST_CHECKOUT": "Khách hàng mới?",
+    "GUEST_CHECKOUT_DESC": "Bạn có thể mua hàng không cần đăng ký, vui lòng nhập thông tin bên dưới để tiếp tục:",
+    "GUEST_CHECKOUT_DESC_SHORT": "Mua hàng không cần đăng kí, bạn có thể tạo tài khoản sau",
+    "GUEST_CHECKOUT_CTA": "Mua hàng không cần đăng ký",
+    "GUEST_CHECKOUT_DESC_2": "Thanh toán nhanh và bảo mật",
+    "ERROR_REGISTERED_EMAIL": "Email này đã được đăng ký, vui lòng nhập mật khẩu để đăng nhập hoặc dùng một email khác.",
+    "STEP_1": "Địa chỉ / Đăng nhập",
+    "STEP_2": "Thanh toán",
+    "SUCCESS_DIVIDE_ORDERS": "Đơn hàng của bạn đã được đặt. Đơn hàng sẽ được chia thành {{qty}} đơn hàng nhỏ:",
+    "ARRIVES_IN_NEXT_X_DAYS": "Giao hàng dự kiến: {{from}}-{{to}} ngày"
+}

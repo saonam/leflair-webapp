@@ -1,0 +1,1 @@
+export { default as FirstSaleTile} from './first-sale-tile';

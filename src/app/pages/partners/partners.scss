@@ -1,0 +1,87 @@
+.pageContainer {
+    visibility: visible
+}
+
+.contentBody {
+    .mainTitle {
+        @extend %h2;
+        font-weight: $font-weight-black;
+        text-align: center;
+        padding-bottom: 40px;
+        padding-top: 48px;
+        text-transform: capitalize;
+        @media (max-width: breakpoint-max(sm)) {
+            font-size: 1.75rem;
+            line-height: 1.2 !important;
+        }
+    }
+
+    .body {
+        .myRow {
+            display: flex;
+            justify-content: center;
+
+            @media(max-width: breakpoint-max(sm)) {
+                flex-direction: column;
+            }
+
+            .part {
+                display: inline-block;
+                padding: 15px;
+                width: calc(100%/3);
+                text-align: center;
+
+                @media(max-width: breakpoint-max(sm)) {
+                    width: 100%;
+                }
+
+                .icon {
+                    color: $brand-primary;
+                    font-size: 2rem;
+                    margin-bottom: 0;
+                }
+
+                .title {
+                    font-weight: $font-weight-black;
+                    margin-bottom: 12px;
+                    font-size: 1.25rem;
+                    @media(min-width: breakpoint-min(sm)) {
+                        font-size: 1.125rem;
+                    }
+                }
+
+                .text {
+                    font-weight: $font-weight-normal;
+                    color: $gray-dark;
+                    font-size: 1rem;
+                    @media(min-width: breakpoint-min(sm)) {
+                        font-size: .875rem;
+                    }
+                }
+
+                &.part1 {
+                    order: 1;
+                }
+                &.part2 {
+                    order: 2;
+                }
+                &.part3 {
+                    order: 3;
+                }
+                &.part4 {
+                    order: 4;
+                }
+                &.part5 {
+                    order: 5;
+
+                    @media(max-width: breakpoint-max(sm)) {
+                        order: 7;
+                    }
+                }
+                &.part-6 {
+                    order: 6;
+                }
+            }
+        }
+    }
+}

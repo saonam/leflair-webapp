@@ -1,0 +1,149 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/tooltip';
+
+:global {
+  @import '~card-react/lib/card';
+
+  .jp-card {
+    min-width: auto !important;
+  }
+}
+
+.cvv-field {
+  position: relative;
+}
+
+.btn-help {
+  position: absolute;
+  top: 0px;
+  right: -35px;
+  font-size: 30px;
+  color: $gray-light;
+  
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    color: $gray-light;
+  }
+}
+
+.cvv-help-image {
+  height: 100px;
+}
+
+.tooltip {
+    font-size: .75rem;
+    z-index: 99;
+    top: -37.5px;
+    left: 0px;
+    display: none;
+
+    @media (max-width: breakpoint-max(sm)) {
+      top: 50px;
+      left: -158px;
+    }
+
+    .tooltip-inner {
+        background-color: #FAFAFA;
+        color: $gray-dark;
+        border: solid 1px $gray-lighter;
+        padding: 6px 6px;
+        box-shadow: 0 -3px 10px 0 rgba(33,33,33,0.2);
+        border-radius: 1px;
+        display: block;
+        width: 100%;
+
+        &:before {
+            top: 55px;
+            left: 0px;
+            margin-left: -5px;
+            content: "";
+            border-width: 5px 5px 5px 0 !important;
+            border-right-color: #D1D3D4 !important;
+
+            @media (max-width: breakpoint-max(sm)) {
+              top: -5px;
+              margin-left: 75px;
+              border-width: 0 5px 5px 5px !important;
+              border-right-color: transparent !important;
+              border-bottom-color: #D1D3D4 !important;
+            }
+        }
+
+        .cvv-image {
+          width: 100%;
+          height: auto;
+        }
+    }
+}
+
+.btn-help:hover .tooltip,
+.btn-help:active .tooltip  {
+    @media (max-width: breakpoint-max(sm)) {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.btn-help:hover .tooltip {
+    @media (min-width: breakpoint-min(md)) {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.card-list {
+    width: auto;
+    height: 25px;
+    display: inline-block;
+    float: right;
+    margin-right: 0;
+    margin-top: -1px;
+
+    img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.error-text {
+  display: none;
+}
+.invalid-field {
+  color: $brand-danger;
+}
+.invalid-field + .error-text {
+  display: block;
+}
+
+.cc-form-container {
+  @media (max-width: breakpoint-max(sm)) {
+    display: block !important;
+  }
+}
+
+.cc-form-wrap {
+  @media (max-width: breakpoint-max(sm)) {
+    padding-right: 0;
+  }
+}
+
+.real-card-wrap {
+  margin-top: 30px;
+  
+  @media (max-width: breakpoint-max(md)) {
+    margin-top: 10px;
+    padding-right: 0;
+  }
+
+  @media (min-width: breakpoint-min(md)) {
+    padding-right: 12px;
+  }
+
+  @media (min-width: breakpoint-min(lg)) {
+    padding-left: 24px;
+    padding-right: 0;
+  }
+
+}

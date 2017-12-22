@@ -1,0 +1,89 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.pageContainer {
+    max-width: 700px;
+    float: none;
+    margin: auto;
+
+    @media (max-width: breakpoint-max(md)) {
+        width: 100%;
+    }
+}
+
+.section {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .container {
+
+        .mainTitle {
+            @extend %h2;
+            font-weight: $font-weight-black;
+            text-align: left;
+            padding-top: 32px;
+            padding-bottom: 24px;
+            @media (max-width: breakpoint-max(sm)) {
+                font-size: 1.75rem;
+                line-height: 1.2 !important;
+            }
+        }
+
+        .title {
+            @extend %h3;
+            text-align: left;
+            font-weight: $font-weight-black;
+            margin-bottom: 16px;
+            margin-top: 24px;
+            @media (max-width: breakpoint-max(sm)) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .text {
+        font-weight: $font-weight-normal;
+    }
+
+    .image {
+        width: 100%;
+    }
+    &.section3 {
+        margin-bottom: 10px;
+
+        .card {
+            margin-bottom: 30px;
+            background-color: initial;
+        }
+
+        @media(max-width: breakpoint-max(md)) {
+            margin-bottom: 25px;
+            
+            .card {
+                margin-bottom: 15px;
+            }
+        }
+    }
+        &.section4 {
+        .image {
+            width: 100%;
+            padding-top: 24px;
+        } 
+        }
+
+    &.section5 {
+        .imageGroup3img {
+            max-width: 100%;
+            margin: auto;
+            padding-top: 32px;
+
+            .childImage {
+                @media(max-width: breakpoint-max(sm)) {
+                    padding: 4px 15px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

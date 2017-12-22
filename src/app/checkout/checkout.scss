@@ -1,0 +1,95 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/custom-forms';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/tooltip';
+
+.checkout-container {
+    display: block;
+    padding-top: 30px;
+    font-size: .875rem;
+
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: 1rem;
+    }
+}
+
+.card {
+    border: solid 1px $border-color;
+    border-radius: $border-radius;
+    margin-bottom: 15px;
+
+    &.active {
+        border-color: $brand-primary;
+        background-color: #fafdfe;
+    }
+}
+
+.card-block {
+    padding: 15px;
+}
+
+.card-title {
+    font-weight: $font-weight-black;
+
+    .actions {
+        float: right;
+
+        a {
+            font-weight: $font-weight-base;
+            font-size: .875rem;
+        }
+    }
+}
+
+.order-summary {
+    .subtotal, .shipping, .voucher, .credit {
+        margin-bottom: 10px;
+    }
+
+    .gift-card {
+        font-weight: $font-weight-base;
+
+        a {
+          color: $gray;
+          text-decoration: underline;
+        }
+    }
+
+    .total {
+        font-weight: $font-weight-black;
+        font-size: 1rem;
+    }
+}
+
+.shipping-address + .billing-address {
+    margin-top: 15px;
+
+    .actions {
+      font-size: .875rem;
+    }
+}
+
+.billing-address {
+    padding-top: 8px;
+}
+
+.footer-padding-reset {
+   padding-bottom: 56px !important;
+   @media (max-width: breakpoint-max(sm)) {
+       padding-top: 48px !important;
+   }
+}
+
+.dot-seperator {
+  color: $gray;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.indicator-padding-top {
+    @media (max-width: breakpoint-max(sm)) {
+        margin-top: 20px;
+        margin-bottom: -8px;
+    }
+}

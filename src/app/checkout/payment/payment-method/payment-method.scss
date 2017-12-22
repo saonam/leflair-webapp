@@ -1,0 +1,33 @@
+.option {
+  padding: 15px;
+  border: solid 1px transparent;
+  
+  &.active {
+    box-shadow: inset 0 0 0 1px $brand-primary;
+    background-color: #fafdfe;
+    margin-left: -2px;
+    width: calc(100% + 4px);
+  }
+}
+
+.heading {
+  font-weight: $font-weight-bold;
+}
+
+.custom-control {
+  margin-bottom: 0;
+}
+
+.shipping-fee {
+  float: right;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  font-size: .875rem;
+  margin-top: 2px;
+}
+
+.free-shipping {
+  color: $brand-complementary;
+  font-size: 13px;
+  margin-top: 4px;
+}

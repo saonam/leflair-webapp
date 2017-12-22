@@ -1,0 +1,47 @@
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/dropdown';
+
+.nav-link {
+    color: $gray-dark;
+
+    @include hover-focus-active {
+      color: $gray-dark;
+    }
+}
+
+.extra-desc {
+  color:rgba(#4E595D,.5);
+  font-size:12px;
+}
+
+@media(max-width: breakpoint-max(sm)) {
+  .nav-link {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: block;
+    float: none;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .dropdown-item {
+      padding: 8px 16px;
+    }
+
+    .extra-desc {
+      display: block;
+      font-size: .75rem !important;
+      color: $gray !important;
+    }
+
+    .dropdown-divider {
+      margin: 5px 0;
+    }
+  }
+}

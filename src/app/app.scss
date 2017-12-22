@@ -1,0 +1,21 @@
+.body {
+    height: 100%;
+}
+
+:global {
+    @import '~bootstrap/scss/reboot';
+    @import '~bootstrap/scss/type';
+    @import '~bootstrap/scss/transitions';
+    @import '~bootstrap/scss/utilities';
+    @import url('/slick/slick.css');
+    @import url('/slick/slick-theme.css');
+
+    html, body {
+      -webkit-tap-highlight-color: transparent;
+    }
+}
+
+html {
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+}

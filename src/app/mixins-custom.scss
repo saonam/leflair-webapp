@@ -1,0 +1,173 @@
+//line wrap
+@mixin line-wrap ($line-amount: 1, $line-height:1.5, $font-size:1rem) {
+    // display: block;
+    // white-space: nowrap;
+    display: -webkit-box;
+    height: calc($font-size*$line-height*$line-amount);
+    -webkit-line-clamp: $line-amount; //line to show
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* @include transition(all,2s,ease-out); */
+@mixin transition($what: all, $time: 0.35s, $how: cubic-bezier(0.23, 1, 0.32, 1)) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    transition:         $what $time $how;
+}
+
+
+%line-wrap-simple {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+%touch-state {
+    &:active {
+        opacity: .8;
+        background-color: #F5FAFA;
+        border-radius: 3px ;
+    }
+    
+    @media (min-width: breakpoint-min(md)) {
+        &:active {
+            opacity: .95;
+        }
+    }
+}
+
+%touch-state-link {
+    &:active {
+        background-color: rgba($brand-primary, .25);
+    }
+}
+
+%mobile-font-weidth-reset {
+    @media (max-width: breakpoint-max(sm)) {
+        font-weight: $font-weight-base !important;
+        // font-size: 1rem !important;
+    }
+}
+
+//headling
+
+%h1 {
+    font-size: $font-size-h1;
+    line-height: 1.2;
+    font-weight: $font-weight-bold;
+    color: $gray-dark;
+    font-family: $font-family-title;
+    // @extend %section-title-heading
+}
+
+%h2 {
+    font-size: $font-size-h2;
+    line-height: 1.2;
+    font-weight: $font-weight-bold;
+    color: $gray-dark;
+    font-family: $font-family-title;
+}
+
+%h3 {
+    font-size: $font-size-h3;
+    line-height: 1.2;
+    font-weight: $font-weight-bold;
+    color: $gray-dark;
+    font-family: $font-family-title;
+}
+
+%h4 {
+    font-size: $font-size-h4;
+    line-height: 1.2;
+    text-align: center;
+    font-family: $font-family-title;
+    text-transform: capitalize;
+    font-weight: $font-weight-normal;
+}
+
+%section-title {
+    @extend %h3;
+    text-align: center;
+    font-family: $font-family-title;
+    
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: 1.25rem;
+    }
+}
+
+%body-text {
+    font-size: $font-size-base;
+    line-height: 1.5;
+    font-weight: $font-weight-base;
+    color: $gray-dark;
+    font-family: $font-family-sans-serif;
+	
+}
+
+%section-title-heading {
+    font-family: $font-family-title;
+    font-size: 1.5rem;//32px
+    color: $gray;
+    font-family: $font-family-title;
+    @media (max-width: breakpoint-max(sm)) {
+        font-size: 1.25rem;
+    }
+}
+
+%description {
+    padding-top: 8px;
+    font-size: .875rem;
+    color: $gray
+}
+%separator {
+        width: 70px;
+        height: 1px;
+        background-color: $gray-light;
+        margin: 8px auto 16px auto;
+}
+
+%btn-active {
+    box-shadow: inset 0 3px 5px 0 rgba(0,0,0,0.17);
+    -webkit-box-shadow: inset 0 3px 5px 0 rgba(0,0,0,0.17);
+}
+%btn-snd-shadow {
+    background: $black;
+    @include transition;
+    box-shadow: inset 0 0 0 1px $white;
+}
+%btn-snd-shadow-2 {
+    background: #FFFFFF;
+    box-shadow: 0 0 14px 0 rgba(0,0,0,0.15);
+    border-radius: 50%;
+    @include transition;
+    &:hover {
+        box-shadow: 0 0 9px 0 rgba(0,0,0,0.25);
+    }
+}
+
+%btn-mobile-reset {
+    @media (max-width: breakpoint-max(sm)) {
+        height: $btn-mobile-height;
+    }
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+%hover-state {
+    &:hover {
+        color: $blue-darker;
+    }
+}
+
+%popover-shadow {
+    box-shadow: 0 11px 17px 0 rgba(146,146,146,0.38);
+}

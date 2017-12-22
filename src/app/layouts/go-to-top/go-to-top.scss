@@ -1,0 +1,51 @@
+.go-to-top {
+
+    cursor: pointer;
+    position: fixed;
+    bottom: 40px;
+    right: 32px;
+    width: 36px;
+    height: 36px;
+    text-decoration: none;
+    text-align: center;
+    visibility: hidden;
+    @extend %btn-snd-shadow;
+    transform: scale(0);
+    opacity: .2;
+    @include transition;
+
+    &:hover {
+      bottom: 46px;
+      text-decoration: none;
+    }
+    
+    @media(max-width: breakpoint-max(sm)) {
+        width: 40px;
+        height: 40px;
+        bottom: 44px;
+        right: $grid-gutter-width-haft;
+        &:hover {
+            bottom: 44px;
+            right: $grid-gutter-width-haft;
+        }
+    }
+
+}
+
+:global(.totop-hidden-no-footer) {
+    visibility: hidden;
+}
+
+:global(.totop-show) {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon {
+    line-height: 36px;
+    font-size: 10px;
+    display: block;
+    margin-top: -1px;
+    color:$white;
+}

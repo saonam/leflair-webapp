@@ -1,0 +1,57 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.pageContainer {
+    display: block;
+    .navSection {
+        @media(max-width: breakpoint-max(sm)) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.container {
+    font-size: .875rem;
+    padding-top: 32px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media(min-width: breakpoint-min(sm)) {
+        padding-top: 48px;
+    }
+}
+
+.pageTitle {
+    margin-bottom: 0;
+    margin-bottom: 32px;
+    @extend %h3;
+}
+
+.cards-section {
+    margin-bottom: 32px;
+}
+
+.heading {
+    margin-bottom: 15px;
+}
+
+.title {
+    margin-bottom: 0;
+    font-weight: $font-weight-bold;
+    display: inline-block;
+}
+
+.my-cards {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.empty-desc {
+    @extend %description;
+}
+
+.custom-control-indicator {
+    padding-left: 8px;
+}
+  

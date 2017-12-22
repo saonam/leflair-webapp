@@ -1,0 +1,16 @@
+.title-container {
+    margin-bottom: 40px;
+
+    @media (max-width: breakpoint-max(sm)) {
+        margin-bottom: 20px;
+    }
+}
+    
+.title {
+    margin-bottom: 0;
+    @extend %section-title;
+}
+
+.separator {
+    @extend %separator;
+}

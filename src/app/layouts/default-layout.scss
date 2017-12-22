@@ -1,0 +1,51 @@
+:global(html) {
+    height: 100%;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:global(body) {
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+
+:global(.navbar-expanded),
+:global(.cart-expanded) {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+:global(#root) {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    padding-top: 52px;
+    padding-bottom: 600px;
+    overflow: hidden;
+
+    @media (min-width: breakpoint-min(sm)) {
+        padding-bottom: 550px;
+    }
+    @media (min-width: breakpoint-min(md)) {
+        padding-bottom: 390px;
+    }
+    @media (min-width: breakpoint-min(lg)) {
+        padding-bottom: 390px;
+        padding-top: 50px;
+    }
+    @media (min-width: breakpoint-min(xl)) {
+        padding-bottom: 390px;
+    }
+}
+
+:global(#landingpage-layout) {
+    &.container {
+        padding-top: 48px;
+    }
+}

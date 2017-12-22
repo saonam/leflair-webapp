@@ -1,0 +1,150 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/forms';
+
+.container {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.subscription-box {
+    margin-top: 12px;
+}
+
+:global(.home-sub-form-anchor) {
+    h4 {
+        text-align: left;
+        @media (max-width: breakpoint-max(md)) {
+            text-align: center;
+        }
+    }
+}
+
+.title-container {
+    margin-bottom: 20px;
+    text-align: center;
+    h3 {
+        margin-bottom: 4px;
+        font-weight: $font-weight-black;
+    }
+    h4 {
+        margin-bottom: 4px;
+        @extend %h4;
+        text-transform: none;
+    }
+    .subtext {
+        font-weight: $font-weight-base;
+        color: $gray-dark;
+        font-size: 1rem;
+    }
+}
+
+.form {
+    width: 100%;
+    text-align: center;
+ 
+}
+
+.form-group {
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: top;
+    @media (max-width: breakpoint-max(sm)) {
+        display: block;
+    }
+
+    &.input-wrap {
+        @media (max-width: breakpoint-max(sm)) {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+
+    &.button-wrap {
+        @media (min-width: breakpoint-max(sm)) {
+            padding-left: 0;
+        }
+
+        .btn {
+            width: 100%;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+}
+
+:global(#sale-sub-box-container) {
+    .form-group {
+
+        &.input-wrap {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &.button-wrap {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: $grid-gutter-width-haft;
+        }
+    }
+}
+
+.thank-you-box {
+    padding-top: 32px;
+    padding-bottom: 24px;
+}
+
+.thank-you {
+    margin-bottom: 0;
+    font-weight: $font-weight-base;
+    text-align: center;
+
+    .icon {
+        font-size: 3rem;
+        color: $brand-primary;
+        text-align: center;
+        margin-bottom: 16px;
+        display: inline-block;
+        border-radius: 50%;
+        line-height: 1;
+    }
+
+    .title {
+        font-weight: $font-weight-black;
+        margin-bottom: 4px;
+    }
+    .sub-title {
+        font-weight: $font-weight-normal;
+        color: $gray;
+    }
+}
+
+.pulse {
+	box-shadow: 0 0 0 rgba($brand-primary, 0.4);
+    animation: pulse 2s infinite;
+
+    &:hover {
+        animation: none;
+    }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba($brand-primary, 0.6);
+    box-shadow: 0 0 0 0 rgba($brand-primary, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 24px rgba($brand-primary, 0);
+      box-shadow: 0 0 0 24px rgba($brand-primary, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba($brand-primary, 0);
+      box-shadow: 0 0 0 0 rgba($brand-primary, 0);
+  }
+}
+
+.error {
+  color: $brand-danger;
+}

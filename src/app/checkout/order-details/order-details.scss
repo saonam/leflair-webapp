@@ -1,0 +1,65 @@
+.card {
+  border: solid 1px $border-color;
+  border-radius: $border-radius;
+  margin-bottom: 15px;
+
+  &.active {
+    border-color: $brand-primary;
+    background-color: #fafdfe;
+  }
+}
+
+.card-block {
+  padding: 15px;
+}
+
+.card-title {
+  font-weight: $font-weight-black;
+
+  .actions {
+    float: right;
+
+    a {
+      font-weight: $font-weight-base;
+      font-size: .875rem;
+    }
+  }
+}
+
+.product {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .image {
+    float: left;
+    width: 25%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .info {
+    float: left;
+    margin-left: 15px;
+    width: calc(75% - 15px);
+
+    .label {
+      font-size: 12px;
+      color: $badge-accent;
+      margin-bottom: 4px;
+    }
+
+    .title {
+      font-weight: $font-weight-bold;
+      line-height: 19px;
+    }
+
+    .desc {
+      @media(max-width: breakpoint-max(sm)) {
+        font-size: .875rem;
+      }
+    }
+  }
+}

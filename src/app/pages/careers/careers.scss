@@ -1,0 +1,80 @@
+@import '~bootstrap/scss/buttons';
+
+.pageContainer {
+    display: block;
+}
+
+.headerBanner {
+    height: 480px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/images/about-career-hero.jpg");
+    background-color: $gray-alt;
+
+    @media (max-width: breakpoint-max(sm)) {
+        height: 240px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: $font-weight-base;
+        color: $white;
+        vertical-align: center;
+    }
+}
+
+.contentBody {
+    display: table;
+    width: 700px;
+    margin: auto;
+    font-weight: $font-weight-normal;
+
+    @media (max-width: breakpoint-max(md)) {
+        width: 100%;
+    }
+
+    .pageTitle {
+        text-align: left;
+        padding-bottom: 16px;
+        padding-top: 24px;
+        margin-bottom: 8px;
+        margin-top: 24px;
+        @extend %h2;
+        font-weight: $font-weight-black;
+        @media (max-width: breakpoint-max(sm)) {
+            font-size: 1.75rem;
+            line-height: 1.2 !important;
+        }
+    }
+
+    .title {
+        font-size: 1.125rem;
+        font-weight: $font-weight-black;
+        margin-bottom: 20px;
+        margin-bottom: 8px;
+        margin-top: 24px;
+    }
+
+    .text {
+        display: block;
+        padding-bottom: 8px;
+    }
+
+    @media(max-width: breakpoint-max(sm)) {
+        display: block;
+
+        .image {
+            display: block;
+            width: 100%;
+        }
+
+        .text {
+            display: block;
+            margin-top: 15px;
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import '~bootstrap/scss/buttons';
+
+.filter-container {
+    &:not(:last-child) {
+        border-bottom: solid 1px $border-color;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: $grid-gutter-width-haft; 
+        padding-right: $grid-gutter-width-haft; 
+    }
+}
+
+.filter-header {
+    margin-bottom: 15px;
+    text-transform: capitalize;
+
+    h5 {
+      font-size: .875rem;
+      font-weight: $font-weight-bold;
+    }
+
+    a {
+        color: $brand-secondary;
+    }
+}

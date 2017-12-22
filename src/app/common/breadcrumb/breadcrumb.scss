@@ -1,0 +1,36 @@
+@import '~bootstrap/scss/breadcrumb';
+
+.breadcrumb {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: $font-weight-normal;
+
+    @media (max-width: breakpoint-max(sm)) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+.breadcrumb-item {
+    float: none;
+    display: inline;
+    white-space: nowrap;
+    font-size: .875rem;
+
+    span {
+      color:$gray-light;
+    }
+
+    a {
+      color:$gray;
+
+      &:hover,
+      &:active {
+          color: $brand-primary;
+      }
+    }
+}

@@ -1,0 +1,18 @@
+@import '~bootstrap/scss/forms';
+
+.preview {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 9px;
+  z-index: 10000;
+  background: green;
+}
+
+.red {
+  background: red;
+}
+
+.offsetSelect {
+  width: auto;
+}

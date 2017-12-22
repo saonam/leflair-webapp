@@ -1,0 +1,45 @@
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/alert';
+
+.text {
+    margin-bottom: 24px;
+    font-weight: $font-weight-base;
+    font-size: .875rem;
+}
+
+.btn {
+    @media (min-width: breakpoint-min(lg)) {
+        max-width: 90%;
+    }
+    @media (max-width: breakpoint-max(sm)) {
+        height: 52px;
+    }
+}
+
+.added-whish-list-desc {
+    font-size: .75rem;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    @include transition;
+    
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+
+    @media (min-width: breakpoint-min(lg)) {
+        max-width: 90%;
+    }
+}
+
+.icon-added {
+    font-size: 0;
+    padding-right: 8px;
+    @include transition;
+
+    &.active {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,24 @@
+.card-title {
+  font-weight: $font-weight-black;
+
+  .actions {
+      float: right;
+
+      a {
+          font-weight: $font-weight-base;
+          font-size: .875rem;
+      }
+  }
+}
+
+.address {
+  .actions {
+    font-size: .875rem;
+  }
+}
+
+.dot-seperator {
+  color: $gray;
+  padding-left: 4px;
+  padding-right: 4px;
+}

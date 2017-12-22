@@ -1,0 +1,371 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '../common/seasonal-layout';
+
+.defaultLayout {
+    padding-top: 53px;
+
+    @media (max-width: breakpoint-max(md)) {
+        padding-top: 96px !important;
+    }
+
+    &.paddingTopWithBanner {
+        padding-top: 53px + $banner-subscription-height !important;
+
+        @media (max-width: breakpoint-max(md)) {
+            padding-top: 96px + $banner-subscription-height !important;
+        }
+    }
+}
+
+.homeContainer {
+    display: block; 
+    background-color: $white;
+}
+
+.paddingRemove {
+    @media (max-width: breakpoint-max(sm)){
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.topSectionWrap {
+    position: relative;
+}
+.topSectionContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+}
+.topShadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    box-shadow: 0 5px 0 0 #FFF, 0 0 13px 0 rgba(188,188,188,0.30), inset 0 30px 0 0 #FFF;
+    margin-top: -30px;
+    @media (max-width: breakpoint-max(sm)) {
+        display: none;
+    }
+}
+
+.currentSaleSectionTitle {
+    padding-top: 4px;
+    @media (max-width: breakpoint-max(sm)) {
+        display: none;
+    }
+}
+
+.upSaleSectionTitle {
+    margin-top: 56px;
+}
+.featuredContainer {
+    overflow: hidden;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    @extend %touch-state;
+    background-color: $white;
+    
+    @media(max-width: breakpoint-max(sm)) {
+      padding-bottom: 8px;
+    }
+
+    @media(min-width: breakpoint-min(md)) {
+      width: 100% !important;
+    }
+
+    &.adjust-top-padding {
+        margin-top: $banner-subscription-height;
+
+    }
+}
+
+.featuredContainer img {
+    width: 100%;
+    height: 36.3vw;
+}
+@media (max-width: 767px) {
+    .featuredContainer img {
+        height: 240px;
+    }
+}
+@media (max-width: 575px) {
+    .featuredContainer img {
+        height: 44.4vw;
+    }
+}
+
+.badge {    
+    border-radius: 12px;
+    color: $white;
+    padding: 3px 8px;
+    font-size: 12px;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    text-transform: capitalize;
+}
+.featured-badge {
+    background-image: linear-gradient(-137deg, #141414 0%, #3A3939 73%, #5D5D5D 100%);
+}
+
+.currentSaleContainer {
+
+    float: none;
+    display: inline-block;
+    margin-bottom: 32px;
+    @media (max-width: breakpoint-max(sm)) {
+        max-width: 100%;
+        padding-left: cals($grid-gutter-width-base/2);
+        padding-right: 0;
+        margin-bottom: 0;
+        padding-bottom: 8px;
+        box-shadow: inset 0 -1px 0 0 rgba($gray,0.10);
+    }
+}
+
+.currentSale {
+    position: relative;
+    display: block;
+    @include transition;
+    @include hover-focus-active {
+        text-decoration: none;
+    }
+
+    @extend %touch-state;
+
+    float: none;
+    margin-bottom: 32px;
+    @media (max-width: breakpoint-max(sm)) {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+        padding-bottom: 8px;
+        box-shadow: inset 0 -1px 0 0 rgba($gray,0.10);
+    }
+}
+
+.image-wrapper {
+    background-color: #F2F6FA;
+    background-image: url('/images/spinner-loading-animated-bg.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: auto;
+}
+@media (max-width: 991px) {
+    .image-wrapper {
+        height: 149px;
+    }
+}
+@media (max-width: 767px) {
+    .image-wrapper {
+        height: 240px;
+    }
+}
+@media (max-width: 575px) {
+    .image-wrapper {
+        height: 44.3vw;
+    }
+}
+@media (min-width: 992px) {
+    .image-wrapper {
+        height: 202px;
+    }
+}
+@media (min-width: 1200px) {
+    .image-wrapper {
+        height: 242px;
+    }
+}
+
+.currentSaleImg {
+    width: 100%;
+    display: block;
+}
+
+.currentSaleInfo {
+    position: relative;
+    @include clearfix;
+    margin-top: 15px;
+    
+
+    @media (max-width: breakpoint-max(sm)) {
+        margin-top: 8px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .currentSaleTitle {
+        @extend %line-wrap-simple;
+        font-weight: $font-weight-normal;
+        margin: 0;
+        width: 65%;
+        float: left;
+        padding-right: 8px;
+        color: $gray-dark;
+        font-size: 1rem;
+        @media (max-width: breakpoint-max(sm)) {
+            font-size: .875rem;
+            font-weight: $font-weight-normal;
+        }
+
+    }
+
+    .endTimeWrap {
+
+        display: block;
+        color: $gray;
+        margin-top: 0;
+        width: 35%;
+        padding-left: 8px;
+        @extend %line-wrap-simple;
+        color: $gray;
+        font-size: 1rem;
+        @media (max-width: breakpoint-max(sm)) {
+            font-size: .875rem;
+        }
+
+        .endTimeContent {
+            float: right;
+
+            .icon {
+                @media (max-width: breakpoint-max(sm)) {
+                    font-size: 0.875rem;
+                    display: none;
+                }
+
+                @media (max-width: breakpoint-max(xs)) {
+                    display: none;
+                }
+            }
+
+            .text {
+                font-weight: $font-weight-base;
+
+                @media (max-width: breakpoint-max(sm)) {
+                    font-size: 0.875rem;
+                }
+
+            }
+
+            .timer {
+                font-weight: $font-weight-base;
+                @media (max-width: breakpoint-max(sm)) {
+                    font-size: 0.875rem;
+                }
+
+            }
+        }
+  
+    }
+}
+
+.best-sellers {
+  position: relative;
+
+  @media (max-width: breakpoint-max(sm)) {
+    margin-top: 40px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.subscription-container {
+  background-color: #F2F6FA;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  margin-top: 32px;
+  margin-bottom: -40px;
+  @include transition;
+
+  @media (min-width: breakpoint-min(sm)) {
+    margin-bottom: -26px;
+    margin-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: breakpoint-min(md)) {
+    margin-bottom: -20px;
+  }
+
+  @media (min-width: breakpoint-min(lg)) {
+    margin-bottom: -72px;
+  }
+
+  &.fade-out {
+      height: 0;
+      opacity: 0;
+  }
+}
+
+.content-wrap {
+  width: 100%;
+
+  @media (min-width: breakpoint-min(sm)) {
+    width: 80%;
+  }
+
+  @media (min-width: breakpoint-min(md)) {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  .current-sale-placeholder {
+      width: 336px;
+      height: 149px;
+  }
+}
+
+@media (max-width: 767px) {
+  .current-sale-placeholder {
+      width: 540px;
+      height: 239px;
+  }
+}
+
+@media (max-width: 575px) {
+  .current-sale-placeholder {
+      width: 100vw;
+      height: 44vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .current-sale-placeholder {
+      width: 456px;
+      height: 202px;
+  }
+}
+
+@media (min-width: 1200px) {
+    .current-sale-placeholder {
+        width: 546px;
+        height: 242px;
+    }
+}
+
+.international-tile {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background-image: linear-gradient(-137deg,#fc4e22,#ff6c01 73%,#fa8d3d);
+    padding: 3px 8px;
+    font-size: 12px;
+    color: white;
+    font-weight: $font-weight-normal;
+    border-radius: 12px;
+}
+
+.bannerWrap {
+    padding-left: 0;
+    padding-right: 0;
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: -12px;
+        padding-right: -12px;
+      }
+}

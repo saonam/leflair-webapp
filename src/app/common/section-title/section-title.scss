@@ -1,0 +1,16 @@
+.title-wrap {
+    margin-bottom: 24px;
+
+    .title {
+        // font-weight: $font-weight-black;
+        color: $gray-dark;
+        @extend %section-title;
+        margin-bottom: 4px;
+    }
+
+    .sub-title {
+        font-size: .875rem;
+        color: $gray;
+        text-align: center;
+    }
+}

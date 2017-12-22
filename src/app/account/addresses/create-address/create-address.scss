@@ -1,0 +1,23 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.nav-section {
+  @media(max-width: breakpoint-max(sm)) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+  
+.create-address {
+  padding-top: 48px;
+  font-size: .875rem;
+}
+
+.heading {
+  margin-bottom: 30px;
+}
+
+.title {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}

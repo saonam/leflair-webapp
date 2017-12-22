@@ -1,0 +1,390 @@
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/forms';
+
+.cart {
+    display: block;
+    position: fixed;
+    width: 450px;
+    top: 0;
+    right: -450px;
+    bottom: 0;
+    background-color: $white;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 10000;
+    box-shadow: -5px 0 11px 0 rgba(33,33,33,0.25);
+    @include transition;
+
+    @media(max-width: breakpoint-max(xs)) {
+        width: 100%;
+    }
+
+    &.active {
+        left: initial;
+        transform: translate3d(-450px, 0, 0);
+        -webkit-transform: translate3d(-450px, 0, 0);
+        visibility: visible;
+    }
+}
+
+.heading {
+    background-color: lighten($gray-lightest,2%);
+    padding: 6px 16px 4px 16px;
+    display: block;
+    position: relative;
+}
+
+.title {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1rem;
+    display: block;
+    padding-bottom: 2px;
+    width: 70%;
+    margin: auto;
+    font-weight: $font-weight-black;
+
+    span {
+      display: block;
+      font-size: 0.775rem;
+      color: $gray;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-weight: $font-weight-normal;
+    }
+}
+.btn-close {
+    display: block;
+    position: relative;
+    margin-top:3px;
+    float: left;
+    padding: 10px;
+    border-radius: 100%;
+    @media(max-width: breakpoint-max(sm)) {
+        padding: 12px;
+        margin-top: 1px;
+    }
+    // background-color: $gray-light;
+    border: solid 1px $gray-alt;
+    cursor: pointer;
+    color: $gray-alt;
+    
+    .icon {
+        text-align: center;
+        display: block;
+        font-size: 1rem;
+        line-height: 1;
+    }
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+.body {
+    padding: 15px 16px 160px 16px;
+    font-weight: $font-weight-base;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    &.empty {
+      overflow-y: hidden !important;
+    }
+}
+
+.cart-empty {
+    padding-top: 24px;
+    text-align: center;
+
+    > div {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    .icon {
+        width: 187px;
+        display: block;
+        margin: auto;
+        padding-bottom: 8px;
+        
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.button-shopping {
+    width: 100%;
+}
+
+.product {
+    display: table;
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: solid 1px $gray-lightest;
+    }
+
+    .image {
+        display: table-cell;
+        width: 24%;
+        vertical-align: top;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+        .overlay {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding-top: 50%;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+
+    .info {
+        padding-left: 15px;
+        vertical-align: top;
+
+        .name {
+            margin-bottom: 4px;
+            font-size: 0.875rem;
+            font-weight: $font-weight-bold;
+
+            a {
+                color: $gray-dark;
+                &:hover {
+                    color: $blue-darker;
+                }
+            }
+        }
+
+        .price {
+            margin-bottom: 6px;
+            margin-top: 5px;
+            @media(min-width: breakpoint-min(sm)) {
+                padding-bottom: 14px; 
+            }
+
+            .retail-price {
+                color: $gray;
+                font-weight: $font-weight-base;
+                text-decoration: line-through;
+                display: block;
+                font-size: 0.875rem;
+                margin-bottom: 2px;
+            }
+            .sale-price {
+                font-weight: $font-weight-bold;
+                display: block;
+                font-size: 1rem;
+            }
+        }
+        .btn-remove {
+            font-size: 0.875rem !important;
+            color: $blue-darker;
+        }
+        .quantity {
+            font-size: 0.75rem;
+            margin-bottom: 3px;
+            display: block;
+            .select-quantity {
+                display: inline-block;
+                width: auto;
+            }
+        }
+        .size {
+          font-size: 0.75rem;
+          margin-bottom: 0;
+          display: block;
+        }
+    }
+
+    & .form-group {
+        margin-bottom: 0;
+    }
+}
+
+.subtotal {
+    font-size: 1.25rem;
+    font-weight: $font-weight-black;
+    margin-bottom: 12px;
+}
+
+.proceed-checkout {
+    margin-bottom: 15px;
+}
+
+.btn-proceed-checkout {
+    width: 100%;
+}
+
+.btn-continue-shopping {
+  font-weight: $font-weight-base;
+}
+
+.btn-proceed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, .0785);
+    background-color: $white; 
+    width: 450px;
+
+    @media(max-width: breakpoint-max(sm)) {
+        width: 100%;
+    }
+    
+    .actions {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        @media(max-width: breakpoint-max(sm)) {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .proceed-checkout {
+            margin-bottom: 0;
+
+            .btn-proceed-checkout {
+                width: 100%;
+                height: $btn-mobile-height;
+                @media(max-width: breakpoint-max(sm)) {
+                    font-weight: $font-weight-black !important;
+                }
+
+                &:focus {
+                    background-color: $brand-primary;
+                    outline: none;
+                    box-shadow: 0 0 0 2px $brand-primary;
+                    border-color: $brand-primary;
+                }
+                &::-moz-focus-inner {
+                    border:0;
+                }
+            }
+
+        }
+    }
+}
+
+.btn-proceed-checkout-dt {
+    display: block;
+    position: relative;
+    padding-top: 24px;
+}
+
+//Custom Select Box
+.select-style {
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    width: 40%;
+
+    @media(max-width: breakpoint-max(sm)) {
+        width: 70%;
+    }
+
+    &:active, &:focus {
+        border: solid 1px $gray;
+        background-color: rgba($gray, .4);
+    }
+
+    &:after {
+        position: absolute;
+        content: "\e91e";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        font-size: 6px;
+        right: 6px;
+        top: 15px;
+        z-index: -1;
+    }
+}
+
+.select-style select {
+
+    padding: 8px 8px;
+    height: 36px !important;
+    cursor: pointer;
+    font-size: 16px;
+    width: 130%;
+    border: none;
+    color: $gray-dark;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+.price-wrap {
+    padding-left: 0;
+}
+
+.errorMessage {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: $brand-complementary;
+}
+.international-tile {
+    font-size: 0.75rem;
+    color: $badge-accent;
+    font-weight: $font-weight-normal;
+}
+.out-of-stock {
+    color: $brand-warning;
+    font-size: 12px;
+}
+
+.promotion-card {
+    display: block;
+}
+
+.promote-section {
+    background-color: #EDEBF7;
+
+    .content {
+        font-size: .875rem;
+        color: $gray-dark;
+        padding: 8px 16px;
+    }
+    .multi-item.content {
+        padding-right: 24px;
+        padding-left: 24px;
+    
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.bold-text {
+    font-weight: $font-weight-black;
+}

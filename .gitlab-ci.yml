@@ -1,0 +1,79 @@
+variables:
+  GOOGLE_APPLICATION_CREDENTIALS: /home/gitlab-runner/leflair.json
+  IMAGE: asia.gcr.io/triple-kingdom-101205/www-react
+  STAGING_TAG: $IMAGE:$CI_COMMIT_SHA
+  PRODUCTION_TAG: $IMAGE:$CI_COMMIT_TAG
+  CLUSTER: cluster-1
+
+stages:
+  - build
+  - push
+  - deploy
+  - cleanup
+
+build staging:
+  stage: build
+  except:
+  - tags
+  script:
+  - yarn
+  - yarn build
+  - docker build -t $STAGING_TAG --build-arg release=$CI_COMMIT_SHA .
+
+build production:
+  stage: build
+  only:
+  - tags
+  script:
+  - yarn
+  - yarn build
+  - docker build -t $PRODUCTION_TAG --build-arg release=$CI_COMMIT_TAG .
+
+push staging image:
+  stage: push
+  only:
+  - master
+  script:
+  - gcloud config configurations activate leflair
+  - gcloud docker -- push $STAGING_TAG
+
+push production image:
+  stage: push
+  only:
+  - tags
+  script:
+  - gcloud config configurations activate leflair
+  - gcloud docker -- push $PRODUCTION_TAG
+
+deploy to staging:
+  stage: deploy
+  only:
+  - master
+  script:
+  - gcloud container clusters get-credentials $CLUSTER
+  - cat deployment/staging/www-react.deployment.yaml | sed "s/{{HASH}}/$CI_COMMIT_SHA/" | kubectl apply -f -
+  - 'curl -X POST -H "Content-type: application/json" --data "{ \"text\":\"Deployed <https://gitlab.leflair.io/www/www-react/commit/$CI_COMMIT_SHA|www-react:$CI_COMMIT_SHA> to <https://www.staging.leflair.io|staging>.\", \"channel\":\"#devops\", \"username\":\"Gitlab\", \"icon_url\":\"https://mattermost.leflair.io/api/v3/emoji/kb1xshh7afryxmt8s7ihij6pey\" }" https://mattermost.leflair.io/hooks/e11nyucfubyaic3ocsmjmirt3h > /dev/null'
+
+deploy to production:
+  stage: deploy
+  only:
+  - tags
+  script:
+  - gcloud container clusters get-credentials $CLUSTER
+  - cat deployment/production/www-react.deployment.yaml | sed "s/{{HASH}}/$CI_COMMIT_TAG/" | kubectl apply -f -
+  - 'curl -X POST -H "Content-type: application/json" --data "{ \"text\":\"Deployed <https://gitlab.leflair.io/www/www-react/commit/$CI_COMMIT_TAG|www-react:$CI_COMMIT_TAG> to <https://www.leflair.vn|production>.\", \"channel\":\"#devops\", \"username\":\"Gitlab\", \"icon_url\":\"https://mattermost.leflair.io/api/v3/emoji/kb1xshh7afryxmt8s7ihij6pey\" }" https://mattermost.leflair.io/hooks/e11nyucfubyaic3ocsmjmirt3h > /dev/null'
+
+clean up staging:
+  stage: cleanup
+  except:
+  - tags
+  script:
+  - docker rmi $STAGING_TAG
+  
+clean up production:
+  stage: cleanup
+  only:
+  - tags
+  script:
+  - docker rmi $PRODUCTION_TAG
+  

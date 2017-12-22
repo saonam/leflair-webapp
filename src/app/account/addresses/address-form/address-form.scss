@@ -1,0 +1,54 @@
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/custom-forms';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/alert';
+
+.btnSubmit {
+    margin-right: $grid-gutter-width-base;
+}
+
+//Custom Select Box
+.select-style {
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent !important;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+        position: absolute;
+        content: "\e91e";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        font-size: 6px;
+        right: 10px;
+        top: 19px;
+        z-index: -1;
+    }
+}
+
+.select-style select {
+
+    padding: $input-padding-x $input-padding-y;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    color: $gray-dark;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}

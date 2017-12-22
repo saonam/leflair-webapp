@@ -1,0 +1,165 @@
+
+//fixing general style
+//adjust place holder text color
+input.form-control::-moz-placeholder {
+  color: $gray-light;
+  opacity: 1;
+}
+input.form-control:-ms-input-placeholder {
+  color: $gray-light;
+  opacity: 1;
+}
+input.form-control::-webkit-input-placeholder {
+  color: $gray-light;
+  opacity: 1;
+}
+
+.custom-control-indicator {
+    box-shadow: $custom-control-indicator-box-shadow;
+    top: .16rem !important;
+    background-size: 65% 65% !important;
+
+    @media (max-width: breakpoint-max(sm)) {
+        top: .28rem !important;
+    }
+}
+
+//alert
+.form-group {
+    .alert {
+        padding: 6px 12px;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0;
+        font-size: .875rem;
+    }
+
+    .alert-danger {
+        color: $brand-danger;
+        background-color: lighten($brand-danger , 40%);
+        border-color: lighten($brand-danger , 30%);
+    }
+
+    .alert-info {
+        background-color: #f0f4f7;
+        color: #3f5865;
+    }
+
+}
+
+
+//stop autozoom on phone when open input
+input[type='text'],
+input[type='number'],
+input[type='date'],
+input[type='tel'],
+input[type='email'],
+input[type='password'],
+input[type='radio'],
+select:focus,
+textarea {
+
+   @media (max-width: breakpoint-max(sm)) {
+            font-size: 1rem;
+        }
+
+}
+
+//Button
+.btn {  
+    font-weight: $font-weight-bold !important;
+    text-transform: capitalize;
+
+    @media (max-width: breakpoint-max(sm)) {
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.btn-primary:focus {
+        background-color: $brand-primary;
+    }
+
+    &.btn-secondary:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus {
+    background-color: $blue-dark;
+    border-color: $blue-dark;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:active.focus,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.btn-primary.active.focus {
+    // background-color: $blue-dark;
+    // border-color: $blue-dark;
+    @extend %btn-active;
+}
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary.active,
+.btn-secondary.active:hover {
+    background-color: $btn-secondary-bg;
+    border-color: $brand-primary;
+    color: $brand-primary;
+}
+.btn.disabled,
+.btn.disabled:hover,
+.btn.disabled:focus,
+.btn:disabled,
+.btn:disabled:hover,
+.btn:disabled:focus,
+.btn.btn-primary:disabled,
+.btn.btn-primary:disabled:hover {
+    background-color: #B2E3EF;
+    border-color: #B2E3EF;
+    box-shadow: none;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary.active:hover {
+    background-color: $blue-light;
+    border-color: $blue-light;
+    @media (max-width: breakpoint-max(md)) {
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+    }
+}
+
+.btn.btn-secondary:hover,
+.btn.btn-secondary.active:hover {
+    @media (max-width: breakpoint-max(md)) {
+        border-color: $gray-light;
+    }
+}
+
+
+//General Style
+.dropdown-menu {
+  border: none !important;
+  box-shadow: 0 8px 11px 0 rgba(33,33,33,0.17);
+  z-index: 99 !important;
+
+  .dropdown-item {
+    @media(max-width: breakpoint-max(sm)) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  .dropdown-divider {
+    background-color: $gray-lightest;
+  }
+}

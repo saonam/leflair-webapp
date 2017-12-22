@@ -1,0 +1,34 @@
+.body-backdrop {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.55);
+  z-index: 9999;
+  @include transition(opacity, .5s, ease);
+
+  &.active {
+    @include transition(opacity, .5s, ease);
+    visibility: visible;
+    opacity: 1;
+    // left: 240px;
+    // width: calc(100% - 240px) !important;
+  }
+}
+
+:global(.navbar-expanded) :local(.body-backdrop),
+:global(.cart-expanded) :local(.body-backdrop) {
+  @include transition(opacity, .5s, ease);
+  // display: block; 
+  visibility: visible;
+  opacity: 1;
+}
+
+:global(.navbar-expanded) :local(.body-backdrop) {
+  left: 240px;
+  width: calc(100% - 240px) !important;
+}

@@ -1,0 +1,61 @@
+@import '~bootstrap/scss/popover';
+@import '~bootstrap/scss/buttons';
+
+.int-desc-wrap {
+  font-size: 13px;
+  background-color: #F2F6FA;
+  padding: 8px 12px;
+  color: $gray-alt;
+  margin-bottom: 16px;
+  border-radius: 3px;
+}
+
+.removeIntProductsContainer {
+  position: relative;
+  margin-top: 8px;
+}
+
+.remove-int-products {
+  cursor: pointer;
+
+  &:active {
+    opacity: .8;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  background-color: $gray-light;
+  font-size: 8px;
+  border-radius: 50%;
+  color: $white;
+  text-align: center;
+  margin-right: 6px;
+  display: inline-block;
+  padding-left: 1px;
+}
+
+.link {
+  color: $gray-alt;
+  text-decoration: underline;
+  line-height: 16px;
+}
+
+.popover {
+  top: 14px;
+  left: -12px;
+  max-width: 275px;
+  box-shadow: 0 13px 17px 0 rgba(146,146,146,0.5);
+  border-radius: 3px;
+}
+
+.buttons {
+  margin-top: 10px;
+  white-space: nowrap;
+
+  .btn:last-child {
+    margin-left: 10px;
+  }
+}

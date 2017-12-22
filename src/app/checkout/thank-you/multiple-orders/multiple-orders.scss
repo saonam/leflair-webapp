@@ -1,0 +1,78 @@
+@import '../single-order/single-order';
+@import '~bootstrap/scss/bootstrap-grid';
+
+.divideOrders {
+  text-align: center;
+}
+
+.order {
+  margin-top: 20px;
+  border: solid 1px $gray-lighter;
+  border-radius: 3px;
+  padding: 8px 16px;
+}
+
+.orderHeader {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: solid 1px $gray-lightest;
+}
+
+.orderTitle {
+  float: left;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.arrive {
+  float: right;
+  font-size: 14px;
+  color: $gray;
+  margin-top: 5px;
+
+  @media (max-width: breakpoint-max(sm)) {
+      float: left;
+      margin-top: 2px;
+  }
+}
+
+.orderBody {
+  display: block;
+}
+
+.product {
+  display: table;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.productImage {
+  // display: table-cell;
+  // width: 100px;
+  vertical-align: top;
+
+  img {
+    width: 100%;
+  }
+}
+
+.productInfo {
+  // display: table-cell;
+  // width: 99%;
+  vertical-align: top;
+  padding-left: 10px;
+  text-align: left;
+  font-size: .875rem;
+}
+
+.productTitle {
+  font-weight: $font-weight-bold;
+}
+
+.callYou {
+  margin-top: 20px;
+  text-align: center;
+}

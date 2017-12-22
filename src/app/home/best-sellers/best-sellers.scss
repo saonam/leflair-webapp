@@ -1,0 +1,8 @@
+.title-container {
+  margin-bottom: 20px;
+  margin-top:24px;
+
+  @media (max-width: breakpoint-max(sm)) {
+      margin-top: 4px;
+  }
+}

@@ -1,0 +1,75 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/buttons';
+@import '../../common/seasonal-layout';
+
+.defaultLayout {
+    @media (max-width: breakpoint-max(md)) {
+        padding-top: 96px !important;
+    }
+}
+
+.btnSeeMore {
+    margin-top: 16px;
+}
+
+.first-sale-container {
+    display: block;
+    padding-bottom: $grid-gutter-width-base;
+    padding-top: $grid-gutter-width-base;
+    padding-left: $grid-gutter-width-haft;
+    padding-right: $grid-gutter-width-haft;
+    width: 100%;
+    @extend %touch-state;
+    @media (max-width: breakpoint-max(md)) {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    @media (max-width: breakpoint-max(sm)) {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.first-sale-desktop {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.image-container {
+    width: 100%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.text-container {
+    padding-left: 24px;
+    .title {
+        font-weight: $font-weight-bold;
+        padding-bottom: 4px;
+        padding-top: 16px;
+    }
+    .time-wrap {
+        display: block;
+        color: $gray;
+    }
+}
+
+.padding-remove {
+    @media (max-width: breakpoint-max(sm)) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.sale-card-container {
+    .currentSale {
+        @media (min-width: breakpoint-min(sm)) {
+            margin-bottom: 0;
+        }
+    }
+}

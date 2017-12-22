@@ -1,0 +1,98 @@
+@import '~bootstrap/scss/buttons';
+
+.heading {
+    font-weight: $font-weight-bold;
+    font-size: .875rem;
+    color: $gray-dark;
+    margin-bottom: 8px;
+}
+
+.btn-color {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    width: 56px;
+    height: 70px;
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px $gray-light;
+
+    @media (min-width: breakpoint-min(md)) {
+        width: 64px;
+        height: 80px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.selected {
+    box-shadow: 0px 0px 0px 3px $brand-primary !important;
+}
+
+.bgColor, .lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.lines {
+    &:before, &:after {
+        position: absolute;
+        top: 0;
+        content: ' ';
+        height: 128%;
+        width: 2px;
+        background-color: white;
+        top: -9px;
+        left: 27px;
+        z-index: 1;
+        @media (min-width: breakpoint-min(md)) {
+            top: -10px;
+            left: 31px;
+        }
+    }
+
+    &:before {
+        transform: rotate(39deg);
+    }
+
+    &:after {
+        transform: rotate(-39deg);
+    }
+}
+
+.sold-out-overlay {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .15);
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.not-empty {
+    .lines:before, .lines:after, 
+    .sold-out-overlay {
+        display: none;
+    }
+}
+
+.partialy-empty {
+    .lines:after {
+        display: none;
+    }
+}
+
+.totally-empty {
+    background-color: $gray-lightest;
+}
+
+.color-selected {
+    text-transform: capitalize;
+    color: $gray;
+}

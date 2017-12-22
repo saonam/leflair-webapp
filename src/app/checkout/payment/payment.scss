@@ -1,0 +1,59 @@
+.card {
+  border: solid 1px $border-color;
+  border-radius: $border-radius;
+  margin-bottom: 15px;
+
+  &.active {
+    border-color: $brand-primary;
+    background-color: #fafdfe;
+  }
+}
+
+.card-block {
+  padding: 15px;
+}
+
+.card-title {
+  font-weight: $font-weight-black;
+}
+
+.proceed-checkout {
+  margin-bottom: 0;
+}
+
+.payment-options {
+  margin: 0 -15px;
+}
+
+.secured-label {
+  background-image: url('/images/veryfied-secure@2x.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100%;
+  width: 167px;
+  height: 46px;
+  margin: 8px 0 24px auto;
+  display: block;
+
+  @media (max-width: breakpoint-max(sm)) {
+      margin: 8px auto;
+  }
+}
+
+.backdrop {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgba($black, .3);
+  z-index: 9999;
+  @include transition(opacity, .5s, ease);
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}

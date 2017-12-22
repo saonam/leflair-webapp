@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: www-ingress
+  namespace: www-staging
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginx"
+    ingress.kubernetes.io/auth-type: "basic"
+    ingress.kubernetes.io/auth-secret: "staging-auth"
+    ingress.kubernetes.io/auth-realm: "Leflair Staging - Authentication Required.\n\nIf you're a customer, go to www.leflair.vn"
+spec:
+  tls:
+  - hosts:
+    - www.staging.leflair.io
+    secretName: www-tls
+  rules:
+  - host: www.staging.leflair.io
+    http:
+      paths:
+      - path: /api
+        backend:
+          serviceName: www-api
+          servicePort: 80
+      - path: /
+        backend:
+          serviceName: www-react
+          servicePort: 80

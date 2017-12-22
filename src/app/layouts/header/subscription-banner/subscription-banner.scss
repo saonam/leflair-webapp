@@ -1,0 +1,182 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.sub-banner-section {
+    display: block;
+    height: $banner-subscription-height;
+    background-color: #212121;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 102;
+    @include transition(height);
+    overflow-y: hidden;
+
+    &.expand {
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("/images/topbar-subscription-banner-mobile-bg.jpg");
+        height: 100vh;
+        box-shadow: 0 5px 11px 0 rgba(33,33,33,0.25);
+
+        @media (min-width: breakpoint-min(md)) {
+            background-image: url("/images/topbar-subscription-banner-bg.jpg");
+            height: 550px;
+        }
+        @media (min-width: breakpoint-min(lg)) {
+            height: 510px;
+        }
+    }
+}
+
+.banner-collapse-wrap {
+    line-height: $banner-subscription-height;
+    height: 100%;
+    text-align: center;
+    color: rgba($white, .8);
+    text-transform: uppercase;
+    font-size: 13px;
+    vertical-align: middle;
+
+    .text-title {
+        font-weight: $font-weight-bold;
+
+        @media (max-width: breakpoint-max(sm)) {
+            margin-right: 32px;
+        }
+    }
+    .text-link {
+        text-decoration: underline;
+        font-weight: $font-weight-normal;
+        color: rgba($white, .7);
+        padding-left: 8px;
+        cursor: pointer;
+    }
+}
+
+.banner-expand-wrap {
+    display: block;
+    position: relative;
+    height: 100%;
+    padding-top: 56px;
+
+    @media (max-width: breakpoint-max(sm)) {
+        padding-top: 24px;
+    }
+}
+
+.section {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    .icon {
+        font-size: 64px;
+        color: rgba($white, 1);
+    }
+
+    .section-title {
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        padding-bottom: 8px;
+        padding-top: 16px;
+        color: rgba($white, 1);
+        @media (max-width: breakpoint-max(sm)) {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+    }
+
+    .section-sub-title {
+        font-size: 14px;
+        font-weight: $font-weight-normal;
+        color: rgba($white, .7);
+
+        @media (max-width: breakpoint-max(sm)) {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+    }
+
+}
+
+.row-wrap-outer {
+    
+    @media (min-width: breakpoint-min(md)) {
+        &::-webkit-scrollbar { 
+            display: none;
+        }
+    }
+
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    @media (max-width: breakpoint-max(sm)) {
+        padding-bottom: 16px;
+    }
+
+    .row-wrap-inner {
+        @media (max-width: breakpoint-max(sm)) {
+            width: 1125px;
+        }
+    }
+}
+
+.mail-box-wrap {
+    padding-top: 0;
+    @media (min-width: breakpoint-min(md)) {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 24px;
+    }
+}
+
+.icon-close {
+    position: absolute;
+    right: 6px;
+    top: 0;
+    color: rgba($white, .7);
+    font-size: 18px;
+    cursor: pointer;
+    height: $banner-subscription-height;
+    width: $banner-subscription-height;
+    line-height: $banner-subscription-height;
+    text-align: center;
+
+    @media (min-width: breakpoint-min(md)) {
+        right: 6px;
+    }
+}
+
+.icon-collapse {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    color: $gray-dark;
+    font-size: 14px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background-color: rgba($white, 1);
+    text-align: center;
+    opacity: 0;
+    @include transition;
+}
+
+.show {
+    opacity: 1;
+}
+
+.continue-shopping {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: rgba($white, .8);
+    font-size: 1rem;
+    padding-top: 24px;
+    display: block;
+    cursor: pointer;
+
+}
